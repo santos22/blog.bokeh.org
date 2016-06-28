@@ -50,49 +50,50 @@
    
    on 2016-06-28
  </p>
- <p>Bokeh Version <code>0.12.0</code> is a large release with many new
-improvements:</p>
+ <p>I'm pleased to announce that Bokeh Version 0.12 has been released. This a large release with many new
+improvements. Before getting into the details, I'd first like to also announce:</p>
+<p><strong><em>0.12.x is the last line of releases before Bokeh 1.0</em></strong></p>
+<p>There will be more to say about the roadmap to 1.0 later this year in a separate blog post, but for now I'll just mention  that the primary focus will be: bugfixes, performance and optimization, build and test automation to support API stability and semantic version, and a very few high-priority remaining features.</p>
+<hr>
+<p>The 0.12 release cycle was longer than most Bokeh release cycles. The result is a</p>
 <ul>
 <li>Responsive layout and styling improvements throughout</li>
 <li>BokehJS plotting and charts APIs for pure JS dev</li>
 <li>Legends can be placed outside / next to the central plot area</li>
 <li>Expanded WebGL support to all markers, fixed webgl bugs</li>
 <li>New color palettes: Viridis, Magma, Inferno, and Plasma</li>
-<li><p>New model types:</p>
-<ul>
-<li>Arrow, Title, and Label annotations</li>
-<li>LogColorMapper for scaled color mapping</li>
-<li>FuncTickFormatter for simpler custom ticking</li>
+<li>New types: Arrow, Title, and Label annotations, LogColorMapper, FuncTickFormatter</li>
+<li>Support for computed transforms (e.g. Jitter) on data columns</li>
+<li>Server features for threading and simpler deployments</li>
+<li>New hosted demos at <a href="https://demo.bokehplots.com">https://demo.bokehplots.com</a></li>
 </ul>
-</li>
-<li><p>Support for computed transforms (e.g. Jitter) on data columns</p>
-</li>
-<li><p>Documentation improvements:</p>
-<ul>
-<li>re-done user gude sections for layout</li>
-<li>new user guide sections for JS APIs</li>
-<li>new user guide sections for custom extensions</li>
-</ul>
-</li>
-<li><p>Server features:</p>
-<ul>
-<li>unlocked callbacks for use with threads</li>
-<li>"--num-threads" option for simpler deployment</li>
-<li>new index landing page listing installed aps</li>
-</ul>
-</li>
-<li><p>UX improvements</p>
+<h4>Layout and Styling</h4>
 <ul>
 <li>toolbar moved to the right, and made sticky, by default</li>
 <li>left aligned title, closer in, by default</li>
 <li>smaller, italic axes labels</li>
 </ul>
-</li>
-<li><p>New hosted demos at <a href="https://demo.bokehplots.com">https://demo.bokehplots.com</a></p>
-</li>
-<li>Many small bug fixes</li>
-</ul>
+<h4>New App Examples</h4>
+<p>Bokeh 0.12 has several new example applications.  Many of these can be viewed at <a href="https://demo.bokehplots.com">https://demo.bokehplots.com</a>, including the new <code>crossfilter</code> example, embedded live below:</p>
+<style>
+  .wrap { width: 620px; height: 380px; padding: 0; overflow: hidden;}
+  .frame { width: 1280px; height: 786px; border: 1px solid black}
 
+  .frame {
+    // zoom: 0.6;
+    -moz-transform: scale(0.6);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(0.6);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(0.6);
+    -webkit-transform-origin: 0 0;
+}
+</style><div class="wrap">
+  <iframe class="frame" src="https://demo.bokehplots.com/apps/crossfilter"></iframe>
+</div><h4>BokehJS APIs</h4>
+<hr>
+<p>Finally, I would just like to say Thank You to all the core contributors, new contributors, and the Bokeh community at large, for helping to make Bokeh the success that it is today.</p>
+<script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-0.12.0.min.js"</script>
  </div>
 
 
