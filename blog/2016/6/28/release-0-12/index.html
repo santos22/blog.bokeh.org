@@ -55,7 +55,19 @@
    
    on 2016-06-28
  </p>
- <p>I'm pleased to announce that Bokeh Version 0.12 has been released! This a
+ <style>
+  .wrap { width: 620px; height: 380px; margin: 15px; overflow: hidden;}
+  .frame { width: 1280px; height: 786px; border: none}
+
+  .frame {
+    -moz-transform: scale(0.6);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(0.6);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(0.6);
+    -webkit-transform-origin: 0 0;
+}
+</style><p>I'm pleased to announce that Bokeh Version 0.12 has been released! This a
 major update with many new improvements. Before getting into the details,
 I'd first like to also announce:</p>
 <p><strong><em>0.12.x is the last line of releases before Bokeh 1.0</em></strong></p>
@@ -71,48 +83,91 @@ releases, more often. But <em>this</em> release represents a giant step forward.
 <p>Here are just a few of the things new in 0.12:</p>
 <ul>
 <li>Responsive layout and styling improvements throughout</li>
-<li>BokehJS plotting and charts APIs for pure JS dev</li>
+<li>First-class BokehJS APIs for plotting and charts</li>
 <li>Legends can be placed outside / next to the central plot area</li>
-<li>Expanded WebGL support to all markers, fixed webgl bugs</li>
-<li>New color palettes: Viridis, Magma, Inferno, and Plasma</li>
-<li>New types: Arrow, Title, and Label annotations, LogColorMapper, FuncTickFormatter</li>
-<li>Support for computed transforms (e.g. Jitter) on data columns</li>
+<li>New color palettes: <em>Viridis, Magma, Inferno, and Plasma</em></li>
+<li>Expanded WebGL support to all markers and fixed WebGL bugs</li>
+<li>New annotations: <em>Arrow, Title, Label, LogColorMapper, FuncTickFormatter</em></li>
+<li>Support for computed transforms (e.g. <a href="http://bokeh.pydata.org/en/latest/docs/gallery/jitter.html">Jitter</a>) on data columns</li>
 <li>Server features for threading and simpler deployments</li>
 <li>New hosted demos at <a href="https://demo.bokehplots.com">https://demo.bokehplots.com</a></li>
 </ul>
+<p>And as usual, many bugfixes and documentation additions.</p>
 <h4>Layout and Styling</h4>
+<p>One of the primary focus areas of the 0.12 release cycle was a major overhaul
+to the way Bokeh lays out documents and components.</p>
+<p>In addition to the layout improvements, Bokeh also got a style refresh. Here
+are the major changes in appearance:</p>
 <ul>
-<li>toolbar moved to the right, and made sticky, by default</li>
-<li>left aligned title, closer in, by default</li>
-<li>smaller, italic axes labels</li>
+<li>"sticky" toolbar on the right side</li>
+<li>left aligned top title, closer to plot</li>
+<li>smaller italic axes labels</li>
 </ul>
-<h4>New App Examples</h4>
-<p>Bokeh 0.12 has several new example applications.  Many of these can be viewed at <a href="https://demo.bokehplots.com">https://demo.bokehplots.com</a>, including the new <code>crossfilter</code> example, embedded live below:</p>
-<style>
-  .wrap { width: 620px; height: 380px; padding: 0; overflow: hidden;}
-  .frame { width: 1280px; height: 786px; border: 1px solid black}
+<div class="bk-root">
 
-  .frame {
-    -moz-transform: scale(0.6);
-    -moz-transform-origin: 0 0;
-    -o-transform: scale(0.6);
-    -o-transform-origin: 0 0;
-    -webkit-transform: scale(0.6);
-    -webkit-transform-origin: 0 0;
-}
-</style><div class="wrap">
+  <script
+      src="bokeh-plot.js"
+      id="b2d13824-3b3d-4de8-879a-5affc8b58701"
+      data-bokeh-model-id="9609f6ba-5d48-47e1-83ba-a53a4cd6b3ad"
+      data-bokeh-doc-id="097e2936-f0c6-4079-b33b-870ada838b47"
+  ></script>
+
+</div><p>In order to accomplish this large undertaking, some old interfaces had to be
+deprecated, and two small breaking changes introduced. For full details,
+consult the <a href="http://bokeh.pydata.org/en/latest/docs/releases/0.12.0.html#migration-guide">Migration Guide</a>.</p>
+<h4>New App Examples</h4>
+<p>In addition to the layout improvements, a number of fixes and features directly
+related the the Bokeh server were made. This included better support for using
+threads with Bokeh apps, a new default index page, the ability to configure
+multiple processes easily with <code>--num-procs</code>, as well as bugfixes and
+performance improvements. All of these togetehr made it easy to create several
+new compelling example applications. Many of these can be viewed at
+<a href="https://demo.bokehplots.com">https://demo.bokehplots.com</a>, including the new <code>crossfilter</code> example,
+embedded live below:</p>
+<div class="wrap">
   <iframe class="frame" src="https://demo.bokehplots.com/apps/crossfilter"></iframe>
-</div><h4>BokehJS APIs</h4>
+</div><p>Select different fields from the dropdowns to query the data along different
+dimensions.</p>
+<h4>BokehJS APIs</h4>
 <p>Until recently, BokehJS has mostly been an internal implementation detail to
 support the Python (and other language) bindings for Bokeh. But there has
-been interest in developing a BokehJS as a first-class JavaScript library in
+been interest in developing a BokehJS as a compelling JavaScript library in
 its own right. With 0.12 BokehJS now has its own set of APIs:
 <a href="http://bokeh.pydata.org/en/latest/docs/user_guide/bokehjs.html#low-level-models">Bokeh.Models</a>
 and <a href="http://bokeh.pydata.org/en/latest/docs/user_guide/bokehjs.html#bokeh-plotting">Bokeh.Plotting</a>, which largely follow the corresponding Python APIs, and
 <a href="http://bokeh.pydata.org/en/latest/docs/user_guide/bokehjs.html#bokeh-charts">Bokeh.Charts</a>
 which is a new API for high-level charts unique to BokehJS.</p>
+<p>Below is a small example using <em>Bokeh.Plotting</em> and the streaming interface:</p>
 <p><div id="bkjs"></div></p>
-<p>In addition to the new User's Guide section on the BokehJS APIs, there is also
+<p>The code for creating the plot is similar to the Python code for creating a
+comparable plot:</p>
+<div class="highlight"><pre><span></span>  <span class="kd">var</span> <span class="nx">plot</span> <span class="o">=</span> <span class="nx">plt</span><span class="p">.</span><span class="nx">figure</span><span class="p">({</span>
+      <span class="nx">tools</span><span class="o">:</span> <span class="s2">&quot;pan,wheel_zoom,save,reset&quot;</span><span class="p">,</span>
+      <span class="nx">title</span><span class="o">:</span> <span class="s2">&quot;Streaming Stocks&quot;</span><span class="p">,</span>
+      <span class="nx">plot_width</span><span class="o">:</span> <span class="mi">600</span><span class="p">,</span>
+      <span class="nx">plot_height</span><span class="o">:</span> <span class="mi">400</span><span class="p">,</span>
+      <span class="nx">background_fill_color</span><span class="o">:</span> <span class="s2">&quot;#eeeeff&quot;</span><span class="p">,</span>
+      <span class="nx">x_axis_label</span><span class="o">:</span> <span class="s2">&quot;time&quot;</span><span class="p">,</span>
+      <span class="nx">x_axis_type</span><span class="o">:</span> <span class="s2">&quot;datetime&quot;</span><span class="p">,</span>
+      <span class="nx">y_axis_label</span><span class="o">:</span> <span class="s2">&quot;price&quot;</span><span class="p">,</span>
+  <span class="p">});</span>
+</pre></div>
+<p>As is the code for streaming data to a data source:</p>
+<div class="highlight"><pre><span></span>  <span class="kd">var</span> <span class="nx">t</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+  <span class="kd">var</span> <span class="nx">period</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">;</span> <span class="c1">// seconds</span>
+  <span class="kd">function</span> <span class="nx">new_data</span><span class="p">()</span> <span class="p">{</span>
+      <span class="nx">t</span> <span class="o">+=</span> <span class="nx">period</span><span class="p">;</span>
+      <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="p">{</span>
+          <span class="nx">t</span><span class="o">:</span> <span class="p">[</span><span class="nx">t</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">],</span>
+          <span class="nx">corp_a</span><span class="o">:</span> <span class="p">[</span><span class="nb">Math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span> <span class="mf">0.3</span> <span class="o">+</span> <span class="mi">0</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">+</span> <span class="mf">3.0</span><span class="p">],</span>
+          <span class="nx">corp_b</span><span class="o">:</span> <span class="p">[</span><span class="nb">Math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span> <span class="mf">0.5</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">+</span> <span class="mf">3.4</span><span class="p">],</span>
+          <span class="nx">corp_c</span><span class="o">:</span> <span class="p">[</span><span class="nb">Math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span> <span class="mf">0.7</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">+</span> <span class="mf">3.8</span><span class="p">],</span>
+      <span class="p">};</span>
+      <span class="nx">source</span><span class="p">.</span><span class="nx">stream</span><span class="p">(</span><span class="nx">d</span><span class="p">,</span> <span class="mi">50</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="nx">setInterval</span><span class="p">(</span><span class="nx">new_data</span><span class="p">,</span> <span class="nx">period</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">);</span>
+</pre></div>
+<p>Besides the new User's Guide section on the BokehJS APIs, there is also
 a new section on <a href="http://bokeh.pydata.org/en/latest/docs/user_guide/extensions.html">Extending Bokeh</a>
 that contains more information about using BokehJS directly, from the perspective
 of building custom user extensions.</p>
@@ -161,8 +216,6 @@ individuals.</p>
   var period = 0.5; // seconds
   function new_data() {
       t += period;
-      // XXX: explicit type annotation required due to TypeScript#6041.
-      // Remove when TypeScript 2.0 is available.
       var d = {
           t: [t * 1000],
           corp_a: [Math.sin(t * 0.3 + 0) * 2 + Math.random() + 3.0],
