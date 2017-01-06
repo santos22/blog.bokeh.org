@@ -100,9 +100,9 @@ Several small but important features and fixes were made by them, quickly, and B
 <p>Since the project's start, Bokeh has taken a fairly straightforward approach to serializing data to and from BokehJS, namely <em>"JSON all the things"</em>.
 With Bokeh applications, this also happens to happen over a websocket, but it's still the same JSON mechanism, with the same associated overhead.
 For many common use cases this works just fine, but when the data starts to grow larger (for example when dealing with data for images where the size grows as N<sup>2</sup>), this overhead becomes noticeable.</p>
-<p>For a long time we have wanted to investigate the use of a binary encoding for arrays, to help improve the performance of serializing array data.
+<p>For a long time we have wanted to investigate the use of a binary encoding for arrays, to help improve the performance of serialization.
 I am happy to say that this task has been accomplished, thanks to the great work of <strong>Philipp Rudigger</strong>, who is also a core contributor to the <a href="http://holoviews.org/">Holoviews</a> project.
-As a result of Phillip's effort, integer and floating point column data source arrays are now automatically serialized using a binary format.
+As a result of Philipp's effort, integer and floating point column data source arrays are now automatically serialized using a binary format.
 Encoding this way is already more efficient by itself, but it also means that BokehJS can now ingest data directly into JavaScript typed arrays, another efficiency improvement.</p>
 <p>One quick as easy benchmark compares the time to render images of differnet sizes using the old and new code:</p>
 <div>
@@ -114,7 +114,7 @@ Encoding this way is already more efficient by itself, but it also means that Bo
         data-bokeh-doc-id="60c59eb0-d3c5-42eb-96f4-1234555e1010"
     ></script>
 <center>
-</div><p>As can be seen, things could get <strong><em>really</em></strong> bad for image sizes above 500x500. The new encoding reduces the time to display drastically.</p>
+</div><p>As can be seen, things could get <strong><em>really</em></strong> bad for image sizes above 500x500. The new binary encoding reduces the time to display drastically.</p>
 <p>Finally, during the course of implementing this, Philip also discovered that the internal logic that prevents Bokeh app events from "boomeranging" between the client and server could be greatly simplified.
 This opened up even more opportunity for performance improvement.</p>
 <p>Another way of visualizing the collective effect of these changes is shown below: A before and after execution log of a running Bokeh app with a periodic callback updating a plot every 100ms. In the before picture, individual events can be seen to be stacking up:</p>
@@ -174,7 +174,7 @@ The first two such properties added were <code>inner_height</code> and <code>out
 <h4>Improvements to Log Plotting</h4>
 <p>Basic log plot capability was added on early in Bokeh's history.
 But it has not seen much attention since then.
-Recently, more users have been asking for improvements to log plotting, so recent contributor <strong>Claire Tang tore</strong> through a whole pile of issues related to log plots:</p>
+Recently, more users have been asking for improvements to log plotting, so recent contributor <strong>Claire Tang</strong> tore through a whole pile of issues related to log plots:</p>
 <ul>
 <li><p><a href="https://github.com/bokeh/bokeh/issues/2789">#2789&mdash;Range padding possibly discards the log axis properties</a></p>
 </li>
@@ -203,8 +203,8 @@ With that in mind, I expect the <code>0.12.5</code> release notes to look someth
 </ul>
 <p>For more details, see the current <a href="https://github.com/bokeh/bokeh/milestone/29"><code>0.12.5</code> Milestone on GitHub</a> or the larger <a href="http://bokehplots.com/pages/roadmap.html">Roadmap Document</a>.
 These are not set in stone, and may certainly change.
-We do welcome feedback and discussion to help shape priorities.</p>
-<p>As always, with more help, we can get more done, more quickly.
+We do welcome feedback and discussion to help shape and set priorities.</p>
+<p>Of course, with more help, we can get more done, more quickly.
 So please consider <a href="http://bokehplots.com/pages/contribute.html">getting involved</a>.</p>
 <hr>
 <p>As we're getting closer to a Bokeh 1.0 release, I'd like to thank the 200+
