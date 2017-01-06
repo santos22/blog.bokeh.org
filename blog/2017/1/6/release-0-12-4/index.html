@@ -101,7 +101,7 @@ Several small but important features and fixes were made by them, quickly, and B
 With Bokeh applications, this also happens to occur over a websocket, but it's still the same JSON mechanism, with the same associated overhead.
 For many common use cases this is fine, but when the data starts to grow larger (for example when dealing with data for images where the size grows as N<sup>2</sup>), this overhead becomes noticeable.</p>
 <p>For a long time we have wanted to investigate the use of a binary encoding for arrays, to help improve the performance of serialization.
-I am happy to say that this task has been accomplished, thanks to the great work of <strong>Philipp Rudigger</strong>, who is also a core contributor to the <a href="http://holoviews.org/">Holoviews</a> project.
+I am happy to say that this task has been accomplished, thanks to the great work of <strong>Philipp Rudiger</strong>, who is also a core contributor to the <a href="http://holoviews.org/">Holoviews</a> project.
 As a result of Philipp's effort, integer and floating point column data source arrays are now automatically serialized using a binary format.
 Encoding this way is already more efficient by itself, but it also means that BokehJS can now ingest data directly into JavaScript typed arrays, another efficiency improvement.</p>
 <p>One quick and easy benchmark compares the "before" and "after" time to render images of different sizes:</p>
@@ -159,14 +159,14 @@ That's also possible with an expression like this:</p>
 The result is nice sections like this one:</p>
 <div class="image"><center><img src="palette.png"></center></div><p>You can check out the full changes in the <a href="http://bokeh.pydata.org/en/latest/docs/reference/palettes.html"><code>bokeh.palettes</code></a> section of the <a href="http://bokeh.pydata.org/en/latest/docs/reference.html">Reference Guide</a>.</p>
 <p>Speaking of the Reference Guide, some parts of the library that were previously "internal" are now more interesting to general users, especially those who might be writing <a href="http://bokeh.pydata.org/en/latest/docs/user_guide/extensions.html">custom extensions</a>.
-Accordingly, we've made a big push to much better document those parts.
+Accordingly, we've made a big push to document those parts much more thoroughly.
 Check out the <a href="http://bokeh.pydata.org/en/latest/docs/reference/core.html"><code>bokeh.core</code></a> docs section.</p>
 <h4>Client-side Read-only Properties</h4>
 <p>Another long-requested feature (by the <a href="http://holoviews.org">Holoviews</a> and <a href="http://datashader.readthedocs.io/en/latest/">Datashader</a> project and others) is the ability to determine and respond to the "inner" dimensions on a plot.</p>
 <div class="image"><center><img src="innerdims.png"></center></div><p>The main obstacle to implementing this was the lack of a mechanism for "read-only" properties, properties that are only able to be set from BokehJS, in the browser.
 The inner dimensions of a plot, determined on the fly by the BokehJS layout machinery, are just like this.
 <strong>Mateusz Paprocki</strong> implemented a mechanism for client-only properties in general, that can be used with with <code>on_change</code> callbacks just like any other properties.
-The first two such properties added were <code>inner_height</code> and <code>outer_height</code>, on plots:</p>
+The first two such properties added were <code>inner_width</code> and <code>inner_height</code>, on plots:</p>
 <div class="highlight"><pre><span></span><span class="n">p</span><span class="o">.</span><span class="n">on_change</span><span class="p">(</span><span class="s2">&quot;inner_width&quot;</span><span class="p">,</span> <span class="n">some_callback</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">on_change</span><span class="p">(</span><span class="s2">&quot;inner_height&quot;</span><span class="p">,</span> <span class="n">some_callback</span><span class="p">)</span>
 </pre></div>
