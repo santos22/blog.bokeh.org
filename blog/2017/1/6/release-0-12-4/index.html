@@ -120,6 +120,12 @@ This opened up even more opportunity for performance improvement.</p>
 <p>Another way of visualizing the collective effect of these changes is shown below: A before and after execution log of a running Bokeh app with a periodic callback updating a plot every 100ms. In the before picture, individual events can be seen to be stacking up:</p>
 <div class="image"><center><img src="before.png"></center></div><p>After Philip's changes, the execution handling each event is clearly separated:</p>
 <div class="image"><center><img src="after.png"></center></div><h4>General JS Callbacks</h4>
+<p>Early on, when we were still sorting out the vision and kinks of the Bokeh server, the capability to add little snippets of JavaScript was added to afford people more possibilities for rich interactions.
+Until now, these points were <code>CustomJS</code> callbacks could be user were added in an ad-hoc fashion, often as a <code>callback</code> property on some Bokeh model.
+For instance, column data sources have a <code>callback</code> property that can trigger a JavaScript callback whenever a selection is made.
+This mechanism proved popular, with user's wanting to put <code>CustomJS</code> callbacks... basically everywhere.
+It's time to make a more solid, generalized means for adding these callbacks.
+Now <code>CustomJS</code> callbacks can be added to any property of any Bokeh model, using the <code>js_on_change</code> method:</p>
 <div class="highlight"><pre><span></span><span class="n">callback</span> <span class="o">=</span> <span class="n">CustomJS</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="n">source</span><span class="p">),</span> <span class="n">code</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">    x0 = cb_obj.start;</span>
 <span class="s2">    x1 = cb_obj.end;</span>
@@ -144,7 +150,7 @@ This opened up even more opportunity for performance improvement.</p>
     ></script>
 </div><p>Of course, you might have more interesting real-world use-cases, such as time-series or other windowed data!</p>
 <p>The original motivation for this was actually to be able to have JS callbacks for <code>ColumnDataSource</code> streaming events.
-That's possible with an expression like this:</p>
+That's also possible with an expression like this:</p>
 <div class="highlight"><pre><span></span><span class="n">source</span><span class="o">.</span><span class="n">js_on_change</span><span class="p">(</span><span class="s1">&#39;stream&#39;</span><span class="p">,</span> <span class="n">stream_callback</span><span class="p">)</span>
 </pre></div>
 <p>One last thing to mention: with a general way to add <code>CustomJS</code> callbacks anywhere, the small set of ad-hoc <code>callback</code> locations that existed up until now will probably be deprecated in the future.</p>
