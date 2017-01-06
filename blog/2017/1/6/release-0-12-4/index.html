@@ -157,7 +157,7 @@ That's also possible with an expression like this:</p>
 <h4>Documentation Improvements</h4>
 <p>The documentation for palettes was improved by adding full docstrings throughout the module, as well as by creating a new <code>:bokeh-palette:</code> Sphinx extensions for displaying nice visual palettes in the docs.
 The result is nice sections like this one:</p>
-<div class="image"><center><img src="palette.png"></center></div><p>You can check out the full changes in the <a href="http://bokeh.pydata.org/en/latest/docs/reference/palettes.html"><code>bokeh.palettes</code></a> section of the Reference Guide.</p>
+<div class="image"><center><img src="palette.png"></center></div><p>You can check out the full changes in the <a href="http://bokeh.pydata.org/en/latest/docs/reference/palettes.html"><code>bokeh.palettes</code></a> section of the <a href="http://bokeh.pydata.org/en/latest/docs/reference.html">Reference Guide</a>.</p>
 <p>Speaking of the Reference Guide, some parts of the library that were previously "internal" are now more interesting to general users, especially those who might be writing [custom extensions to Bokeh].
 Accordingly, we've made a big push to much better document those parts.
 Check out the <a href="http://bokeh.pydata.org/en/latest/docs/reference/core.html"><code>bokeh.core</code></a> section of the Reference Guide to see more.</p>
@@ -170,7 +170,7 @@ The first two such properties added were <code>inner_height</code> and <code>out
 <div class="highlight"><pre><span></span><span class="n">p</span><span class="o">.</span><span class="n">on_change</span><span class="p">(</span><span class="s2">&quot;inner_width&quot;</span><span class="p">,</span> <span class="n">some_callback</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">on_change</span><span class="p">(</span><span class="s2">&quot;inner_height&quot;</span><span class="p">,</span> <span class="n">some_callback</span><span class="p">)</span>
 </pre></div>
-<p>Of course, these proprties work with the new <code>js_on_change</code> feature introduced above, as well.</p>
+<p>Of course, these properties work with the new <code>js_on_change</code> feature introduced above, as well.</p>
 <h4>Improvements to Log Plotting</h4>
 <p>Basic log plot capability was added on early in Bokeh's history.
 But it has not seen much attention since then.
