@@ -72,6 +72,7 @@ This update has the following highlights:</p>
 <li>Generalized mechanism to add <code>CustomJS</code> callbacks to any property.</li>
 <li>Several fixes to log plots, as well as custom extensions.</li>
 <li>Support for read-only (client-side) properties, such as a plot's "inner" screen dimensions.</li>
+<li><a href="http://bokeh.pydata.org/en/latest/docs/user_guide/server.html#embedding-bokeh-server-as-a-library">Guidance</a> and <a href="https://github.com/bokeh/bokeh/tree/master/examples/howto/server_embed/">examples</a> for embedding a Bokeh server directly in standalone scripts, Jupyter notebooks, and Tornado and Flask applications.</li>
 <li>Improved documentation and Sphinx extensions for the <a href="http://bokeh.pydata.org/en/latest/docs/reference/palettes.html"><code>bokeh.palettes</code></a> module.</li>
 <li>Major refactor of <a href="http://bokeh.pydata.org/en/latest/docs/reference/core.html"><code>bokeh.core</code></a>  including tests and expanded documentation relevant to extension authors.</li>
 </ul>
@@ -87,13 +88,14 @@ For full details, see the <a href="https://github.com/bokeh/bokeh/blob/0.12.4/CH
 <p>Before getting to the technical details of this release, I wanted to take a moment to recognize some stats about the community:</p>
 <ul>
 <li>The <a href="https://groups.google.com/a/continuum.io/forum/?pli=1#!forum/bokeh">public mailing list</a> has more than <strong>700</strong> members</li>
+<li><a href="https://twitter.com/bokehplots">@BokehPlots</a> has nearly <strong>4000</strong> followers</li>
 <li>The number of GitHub stars just hit <strong>5200</strong> (!)</li>
 <li>Before the holidays, combined conda+pip downloads exceeded <strong>120k/month</strong></li>
 </ul>
 <p>Any one of these facts alone is humbling, and a testament to the work of so many contributors over the last few years.
 Which brings me to the most impressive number yet.
 Several people rose to the <a href="https://groups.google.com/a/continuum.io/forum/?pli=1#!topic/bokeh/Gb8CLTVopLY">End of 2016 Contributor Challenge</a> I posted on the mailing list, and I am happy to report that the tally is now:</p>
-<div class="image"><center><img src="contributors.png"></center></div><p>It seems to be an iron rule that the number of issues grows with the number of users, so growing a base of developers to help with those issues is crucial to the long term health of the project.
+<div class="image"><center><img src="contributors.png"></center></div><p>Without fail, the number of issues grows with the number of users, so growing a base of developers to help with those issues is crucial to the long term health of the project.
 I'd like in particular to thank new contributors: <a href="https://github.com/bgbg">bgbg</a>, <a href="https://github.com/ivan-krukov">ivan-krukov</a>, <a href="https://github.com/jfinkels">jfinkels</a>, and <a href="https://github.com/souravsingh">souravsingh</a>.
 Several small but important features and fixes were made by them, quickly, and Bokeh is all the better for it. Some of them are already working on their second PRs!</p>
 <h4>Binary Array Protocol</h4>
