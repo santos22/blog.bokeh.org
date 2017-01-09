@@ -121,7 +121,22 @@ Encoding this way is already more efficient by itself, but it also means that Bo
 This opened up even more opportunity for performance improvement.</p>
 <p>Another way of visualizing the collective effect of these changes is shown below: A before and after execution log of a running Bokeh app with a periodic callback updating a plot every 100ms. In the before picture, individual events can be seen to be stacking up:</p>
 <div class="image"><center><img src="before.png"></center></div><p>After Philipp's changes, the execution handling each event is clearly separated:</p>
-<div class="image"><center><img src="after.png"></center></div><h4>General JS Callbacks</h4>
+<div class="image"><center><img src="after.png"></center></div><h4>Guidance for Embedding Bokeh Servers</h4>
+<p>As nice and useful as it is to run Bokeh applications with <code>bokeh serve app.py</code> there are also
+situations where it might be preferable to be able to <em>embed</em> a Bokeh server inside another
+script or application.</p>
+<p>In particular an important missing piece has been the ability to define and interact with Bokeh applications directly in Jupyter notebooks.
+Although there is still some work to do to refine this capability, an example notebook was added that demonstrates a technique that can be used immediately.
+You can see the result below:</p>
+<div class="image"><center><img src="embed.gif"></center></div><p>In addition to the notebook, examples were added to show how to embed a Bokeh server in a standalone script, a Flask application, and a Tornado application.
+You can see all the examples in th GitHub repository:</p>
+<ul>
+<li><a href="https://github.com/bokeh/bokeh/tree/master/examples/howto/server_embed/flask_embed.py">flask_embed.py</a></li>
+<li><a href="https://github.com/bokeh/bokeh/tree/master/examples/howto/server_embed/notebook_embed.ipynb">notebook_embed.ipynb</a></li>
+<li><a href="https://github.com/bokeh/bokeh/tree/master/examples/howto/server_embed/standalone_embed.py">standalone_embed.py</a></li>
+<li><a href="https://github.com/bokeh/bokeh/tree/master/examples/howto/server_embed/tornado_embed.py">tornado_embed.py</a></li>
+</ul>
+<h4>General JS Callbacks</h4>
 <p>Early on, when we were still sorting out the vision and kinks of the Bokeh server, the capability to add little snippets of JavaScript was added to afford people more possibilities for rich interactions.
 Until now, the places where <code>CustomJS</code> callbacks could be used were added in an ad-hoc fashion, often as a <code>callback</code> property on some Bokeh model.
 For instance, column data sources have a <code>callback</code> property that can trigger a JavaScript callback whenever a selection is made.
