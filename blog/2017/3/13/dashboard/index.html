@@ -65,29 +65,28 @@
     <div class="row">
       <div class="eleven columns">
         <div class="text-block text-block-default">
-  <p>Recently, I completed a project creating an analytics dashboard for a client.  I used Bokeh for the visualizations and wanted
-to share my experiences.</p>
+  <p>Recently, I completed a project creating an analytics dashboard for a client.
+I used Bokeh for the visualizations and wanted to share my experiences.</p>
 <h1>Overview</h1>
-<p><img src="all_tiny.png"/></p>
-<p>In the top left corner we have statistics for three servers with line graphs representing CPU, memory, and disk usage.  If any
+<p>I'd like to describe the dashboard I created and then talk about some of the
+steps it took to create. You can see the finished product below:</p>
+<div class="image"><center><img src="all_tiny.png"/></center></div><p>In the top left corner we have statistics for three servers with line graphs representing CPU, memory, and disk usage.  If any
 graph has a reading above 75% it, its title, and its plot turn red like <a href="http://bokeh.pydata.org/en/latest/docs/gallery/box_annotation.html">this</a>.
 When the readings drop, things go back to normal. Moving downward, we have two line graphs plotting users currently
 connected to our system and how fast our system is processing their messages over time.  At the bottom is a live Google
 Map of users in the field that are transmitting, with colors representing different user states.</p>
 <p>On the top right we have various tables showing running processes, versioning, jar info, uptime, and open file statistics (when available).
-Below that, we have an alerts area displaying faults, overflows, and server errors. The figures change to red when they exceed certain 
-parameters and the drop downs are shown as needed. Finally, we have the 'firehose' on the bottom right that's fed from tails of various logs 
+Below that, we have an alerts area displaying faults, overflows, and server errors. The figures change to red when they exceed certain
+parameters and the drop downs are shown as needed. Finally, we have the 'firehose' on the bottom right that's fed from tails of various logs
 from two boxes, colored coded to keep it straight.  It's not shown in the photo, but the log scrolls fairly like a terminal, albeit quickly (my client said they wanted it
 'for peace of mind', even though the logs fly by at light speed).</p>
 <h4>Close Ups</h4>
-<p><img src="server_graphs.png"/>
-<img src="lines_gps.png"/>
-<img src="alerts_procs.png"/></p>
-<h4>Full Sized Shot</h4>
-<p><img src="all.png"/></p>
-<h4>Action Shot</h4>
-<p><img src="action.gif"/></p>
-<h1>Development Strategy</h1>
+<p>You can see some of the elements close up in the images below:</p>
+<div class="image"><center><img src="server_graphs.png"/></center></div>
+<div class="image"><center><img src="lines_gps.png"/></center></div>
+<div class="image"><center><img src="alerts_procs.png"/></center></div><h4>Full Sized Shot</h4>
+<p>And here is a shot showing the dahsboard updating over time:</p>
+<div class="image"><center><img src="action.gif"/></center></div><h1>Development Strategy</h1>
 <p>My game plan for the project was to create each module grouping (server stats, long line graphs, GPS, tables
 firehose) separately and then fit them together in whatever way made the most visual sense.  I felt this approach allowed me
  to pay closer attention to the details of each module and adjust the over all app layout as needed without
