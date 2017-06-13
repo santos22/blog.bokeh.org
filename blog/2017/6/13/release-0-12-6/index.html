@@ -105,14 +105,14 @@ Here is an SVG of the same unemployment example above:</p>
 <div class="image"><center><img src="unemployment.svg" width="75%" ></center></div><hr>
 <p>To use this new capability, some additional optional dependencies (such as Selenium) must first be installed. See the new User's Guide section <a href="http://bokeh.pydata.org/en/0.12.6/docs/user_guide/export.html">Exporting Plots</a> for information about how to get everything up and running. Like all new features, there will almost certainly be some kinks to straighten out. Please report any issues (with full details) on the <a href="https://github.com/bokeh/bokeh/issues">issue tracker</a>.</p>
 <h4>Layout System Improvements</h4>
-<p>Bokeh <code>0.12</code> introduced a new layout system for entire documents, affording the ability to display sophisticated data applications with multiple controls and plots. However, the layout system is complex, and more than a few problems have turned up since it was added. Thanks to the tireless work of Mateusz Paprocki, this release saw a major cleanup of the entire layout system, resulting in many fixed bugs:</p>
+<p>Bokeh <code>0.12</code> introduced a new layout system for entire documents, affording the ability to display sophisticated data applications with multiple controls and plots. However, the layout system is complex, and more than a few problems have turned up since it was added. Thanks to the tireless work of Mateusz Paprocki, this release saw a major cleanup of the entire layout system. In general, the responsiveness of layout has been improved, but most importantly many bugs were fixed:</p>
 <p><a href="https://github.com/bokeh/bokeh/issues/4764">#4764&mdash;Issue with interactions between widgets and plots using bokeh server</a></p>
 <p><a href="https://github.com/bokeh/bokeh/issues/4810">#4810&mdash;Trouble Swapping out layout contents when using server</a></p>
 <p><a href="https://github.com/bokeh/bokeh/issues/5131">#5131&mdash;Unexpected initial layout with DataTable and layout()</a></p>
 <p><a href="https://github.com/bokeh/bokeh/issues/5518">#5518&mdash;Add new child to existing column</a></p>
 <p><a href="https://github.com/bokeh/bokeh/issues/5879">#5879&mdash;Make "bokeh finished rendering heuristic" work with non-plot examples</a></p>
 <p><a href="https://github.com/bokeh/bokeh/issues/6213">#6213&mdash;Appending layout regression</a></p>
-<p>In general, the responsiveness of layout has been improved as well. There's still more work to do, but this work puts the Bokeh layout capability of solid footing for the future.</p>
+<p>Additionally, a lot of behind the scenes refactoring puts the Bokeh layout capability of solid footing for the future.</p>
 <h4>Bands and Whiskers</h4>
 <p>Another long-requested feature is annotations for reporting errors and uncertainty. The plot below shows off the new <a href="http://bokeh.pydata.org/en/0.12.6/docs/user_guide/annotations.html#whiskers"><code>Whisker</code></a> and <a href="http://bokeh.pydata.org/en/0.12.6/docs/user_guide/annotations.html#bands"><code>Band</code></a> annotations:</p>
 <div>
@@ -123,8 +123,8 @@ Here is an SVG of the same unemployment example above:</p>
     data-bokeh-model-id="d5ca1cab-a386-491d-ad1c-14b07835f09f"
     data-bokeh-doc-id="8a4d34ae-bf9f-4bcf-a19f-902216d6c453"
 ></script>
-</center></div><p>Future planned improvements include an <code>errorbar</code> function to help add these to plots more easily.</p>
-<p>For good measure, this plot also shows off some new syntax for overriding tick formatting more easily. The x-coordinates in the plot number successive trading days. We want to label every fifth value (i.e. every Monday) as a new week, which can now be done easily like this:</p>
+</center></div><p>Future planned improvements include an <code>errorbar</code> function to help make using these annotations even easier.</p>
+<p>For good measure, this plot also shows off some new syntax that makes overriding tick formatting a snap. The x-coordinates in the plot number successive trading days. We want to label every fifth value (i.e. every Monday) as a new week, which can now be done easily like this:</p>
 <div class="highlight"><pre><span></span><span class="n">p</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">ticker</span> <span class="o">=</span> <span class="n">mondays</span> <span class="c1"># [0, 5, 10, ...]</span>
 <span class="n">p</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">major_label_overrides</span> <span class="o">=</span> <span class="p">{</span> <span class="n">d</span><span class="p">:</span> <span class="s2">&quot;week </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">mondays</span><span class="p">)}</span>
 </pre></div>
