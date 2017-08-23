@@ -26,7 +26,7 @@
       <div class="container">
         <ul class="navbar-list">
             <li class="navbar-item"><a class="navbar-link" href="/">Home</a></li>
-            <li class="navbar-item"><a class="navbar-link" href="http://bokeh.pydata.org/en/latest">Documentation</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="https://bokeh.pydata.org/en/latest">Documentation</a></li>
             <li class="navbar-item"><a class="navbar-link" href="/blog">Blog</a></li>
         </ul>
       </div>
@@ -69,7 +69,7 @@
 <p>This update includes the following highlights:</p>
 <ul>
 <li><em>Headless, programmatic export of SVG and PNG images</em></li>
-<li><em>New annotations <a href="http://bokeh.pydata.org/en/0.12.6/docs/user_guide/annotations.html#whiskers"><code>Whisker</code></a> and <a href="http://bokeh.pydata.org/en/0.12.6/docs/user_guide/annotations.html#bands"><code>Band</code></a> for displaying error estimates</em></li>
+<li><em>New annotations <a href="https://bokeh.pydata.org/en/0.12.6/docs/user_guide/annotations.html#whiskers"><code>Whisker</code></a> and <a href="https://bokeh.pydata.org/en/0.12.6/docs/user_guide/annotations.html#bands"><code>Band</code></a> for displaying error estimates</em></li>
 <li><em>Fine-grained sub-element patching for images and other "multi" glyphs</em></li>
 <li><em>Hover hit-testing extended to segments and all markers</em></li>
 <li><em>Fixes for sorting and selecting from DataTables</em></li>
@@ -78,7 +78,7 @@
 </ul>
 <p>Additionally, this release contains many other small bugfixes and docs additions.
 For full details, see the <a href="https://github.com/bokeh/bokeh/blob/master/CHANGELOG">CHANGELOG</a>
-and <a href="http://bokeh.pydata.org/en/latest/docs/releases/0.12.6.html">Release Notes</a>.</p>
+and <a href="https://bokeh.pydata.org/en/latest/docs/releases/0.12.6.html">Release Notes</a>.</p>
 <p>As a reminder, we now package and upload examples for each Bokeh release
 to our CDN. <a href="https://cdn.pydata.org/bokeh/examples/examples-0.12.6.zip">Click here to download</a>.</p>
 <hr>
@@ -103,7 +103,7 @@ otherwise.</p>
 <p>Do note the <em>plural</em> in the function name. When exporting grid plots or layouts with multiple plots, <code>export_svgs</code> will generate a separate SVG for every plot: <code>plot.svg</code>, <code>plot_1.svg</code>, <code>plot_2.svg</code>, etc. This is different from the "full screenshot" style of the PNG export, but should be useful for those embedding plots into publications who want finer control of what-goes-where.
 Here is an SVG of the same unemployment example above:</p>
 <div class="image"><center><img src="unemployment.svg" width="75%" ></center></div><hr>
-<p>To use this new capability, some additional optional dependencies (such as Selenium) must first be installed. See the new User's Guide section <a href="http://bokeh.pydata.org/en/0.12.6/docs/user_guide/export.html">Exporting Plots</a> for information about how to get everything up and running. Like all new features, there will almost certainly be some kinks to straighten out. Please report any issues (with full details) on the <a href="https://github.com/bokeh/bokeh/issues">issue tracker</a>.</p>
+<p>To use this new capability, some additional optional dependencies (such as Selenium) must first be installed. See the new User's Guide section <a href="https://bokeh.pydata.org/en/0.12.6/docs/user_guide/export.html">Exporting Plots</a> for information about how to get everything up and running. Like all new features, there will almost certainly be some kinks to straighten out. Please report any issues (with full details) on the <a href="https://github.com/bokeh/bokeh/issues">issue tracker</a>.</p>
 <h4>Layout System Improvements</h4>
 <p>Bokeh <code>0.12</code> introduced a new layout system for entire documents, affording the ability to display sophisticated data applications with multiple controls and plots. However, the layout system is complex, and more than a few problems have turned up since it was added. Thanks to the tireless work of Mateusz Paprocki, this release saw a major cleanup of the entire layout system. In general, the responsiveness of layout has been improved, but most importantly many bugs were fixed:</p>
 <p><a href="https://github.com/bokeh/bokeh/issues/4764">#4764&mdash;Issue with interactions between widgets and plots using bokeh server</a></p>
@@ -114,7 +114,7 @@ Here is an SVG of the same unemployment example above:</p>
 <p><a href="https://github.com/bokeh/bokeh/issues/6213">#6213&mdash;Appending layout regression</a></p>
 <p>Additionally, a lot of behind the scenes refactoring puts the Bokeh layout capability on solid footing for the future.</p>
 <h4>Bands and Whiskers</h4>
-<p>Another long-requested feature is annotations for reporting errors and uncertainty. The plot below shows off the new <a href="http://bokeh.pydata.org/en/0.12.6/docs/user_guide/annotations.html#whiskers"><code>Whisker</code></a> and <a href="http://bokeh.pydata.org/en/0.12.6/docs/user_guide/annotations.html#bands"><code>Band</code></a> annotations:</p>
+<p>Another long-requested feature is annotations for reporting errors and uncertainty. The plot below shows off the new <a href="https://bokeh.pydata.org/en/0.12.6/docs/user_guide/annotations.html#whiskers"><code>Whisker</code></a> and <a href="https://bokeh.pydata.org/en/0.12.6/docs/user_guide/annotations.html#bands"><code>Band</code></a> annotations:</p>
 <div>
 <center>
 <script
@@ -130,7 +130,7 @@ Here is an SVG of the same unemployment example above:</p>
 </pre></div>
 <h4>Efficient Streaming for Higher Dimensional Data</h4>
 <p>Bokeh has had <code>patch</code> and <code>stream</code> methods on <code>ColumnDataSource</code> for some time now. These allow for efficient or incremental updates to individual items in CDS columns. For most cases, where the columns are one-dimensional arrays, this is a great benefit. But for some glyphs, such as <code>MultiLine</code> and <code>Image</code>, the items in the columns are themselves arrays. In these cases, <code>patch</code> was not nearly as useful as it could be&mdash;until now. Now it is possible to use <code>patch</code> to partially update individual locations or slices of CDS column items that are arrays. The demo below shows <code>patch</code> being used to update subsets of circles, multi-lines, and images all at once:</p>
-<div class="image"><center><img src="patch.gif"></center></div><p>You can find more information in the <a href="http://bokeh.pydata.org/en/0.12.6/docs/reference/models/sources.html#bokeh.models.sources.ColumnDataSource.patch">Reference Guide</a> or check out and run the source code for the above example at <a href="https://github.com/bokeh/bokeh/blob/0.12.6/examples/howto/patch_app.py"><code>examples/howto/patch_app.py</code></a>.</p>
+<div class="image"><center><img src="patch.gif"></center></div><p>You can find more information in the <a href="https://bokeh.pydata.org/en/0.12.6/docs/reference/models/sources.html#bokeh.models.sources.ColumnDataSource.patch">Reference Guide</a> or check out and run the source code for the above example at <a href="https://github.com/bokeh/bokeh/blob/0.12.6/examples/howto/patch_app.py"><code>examples/howto/patch_app.py</code></a>.</p>
 <h4>High-level Charts</h4>
 <p>Looking towards a 1.0 release, we are in the process of paring down Bokeh for long term stability and maintenance. We want to make it a rock solid platform for other high level and domain specific tools to build on. As part of this, we have decided to cleave <code>bokeh.charts</code> from the core library.</p>
 <center><h5><b>bokeh.charts is now a separate package.</b></h5></center><p>The new project is called <a href="https://github.com/bokeh/bkcharts"><code>bkcharts</code></a>. Current usage of <code>bokeh.charts</code> will work (with a deprecation warning) until Bokeh 1.0 is released. At that time, it will be be necessary to separately install and import from the <code>bkcharts</code> package to continue using this API. However, due to resource constraints, <em>support and maintenance for <code>bkcharts</code> by the current team will be extremely minimal from this point on .</em></p>

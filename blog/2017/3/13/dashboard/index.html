@@ -26,7 +26,7 @@
       <div class="container">
         <ul class="navbar-list">
             <li class="navbar-item"><a class="navbar-link" href="/">Home</a></li>
-            <li class="navbar-item"><a class="navbar-link" href="http://bokeh.pydata.org/en/latest">Documentation</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="https://bokeh.pydata.org/en/latest">Documentation</a></li>
             <li class="navbar-item"><a class="navbar-link" href="/blog">Blog</a></li>
         </ul>
       </div>
@@ -71,7 +71,7 @@ I used Bokeh for the visualizations and wanted to share my experiences.</p>
 <p>I'd like to describe the dashboard I created and then talk about some of the
 steps it took to create. You can see the finished product below:</p>
 <div class="image"><center><img src="all_tiny.png"/></center></div><p>In the top left corner we have statistics for three servers with line graphs representing CPU, memory, and disk usage.  If any
-graph has a reading above 75% it, its title, and its plot turn red like <a href="http://bokeh.pydata.org/en/latest/docs/gallery/box_annotation.html">this</a>.
+graph has a reading above 75% it, its title, and its plot turn red like <a href="https://bokeh.pydata.org/en/latest/docs/gallery/box_annotation.html">this</a>.
 When the readings drop, things go back to normal. Moving downward, we have two line graphs plotting users currently
 connected to our system and how fast our system is processing their messages over time.  At the bottom is a live Google
 Map of users in the field that are transmitting, with colors representing different user states.</p>
@@ -94,12 +94,12 @@ much issue.   All modules are comprised of only two Bokeh elements, HTML divs (i
 Periodic callbacks update everything, except the Google Map that hits a local Flask API periodically via Javascript instead.  I did this because at the time of writing there were some issues with Bokeh's GMapPlot (but that should be resolved in the next release).
 Error handling was mostly concentrated to handling data from the various Bash commands used to source server stats and dealing with their output, expected or otherwise.</p>
 <h1>Back End Setup</h1>
-<p>I tried to stay with the "server app" design similar to those shown <a href="http://bokeh.pydata.org/en/latest/docs/gallery.html">here</a>
-and kept my folder structure as prescribed <a href="http://bokeh.pydata.org/en/latest/docs/user_guide/server.html#directory-format">here</a>
-to try and keep things simple, with all my Python in a common folder and a HTML file in a "templates" folder.  This was done so Bokeh's Tornado server would find the HTML file and use it as a template for the app.  I also used <a href="http://bokeh.pydata.org/en/latest/docs/user_guide/server.html#updating-from-threads">threads</a> and
-<a href="http://bokeh.pydata.org/en/latest/docs/user_guide/server.html#updating-from-unlocked-callbacks">unlocked callbacks</a>
+<p>I tried to stay with the "server app" design similar to those shown <a href="https://bokeh.pydata.org/en/latest/docs/gallery.html">here</a>
+and kept my folder structure as prescribed <a href="https://bokeh.pydata.org/en/latest/docs/user_guide/server.html#directory-format">here</a>
+to try and keep things simple, with all my Python in a common folder and a HTML file in a "templates" folder.  This was done so Bokeh's Tornado server would find the HTML file and use it as a template for the app.  I also used <a href="https://bokeh.pydata.org/en/latest/docs/user_guide/server.html#updating-from-threads">threads</a> and
+<a href="https://bokeh.pydata.org/en/latest/docs/user_guide/server.html#updating-from-unlocked-callbacks">unlocked callbacks</a>
 for pretty much every element in the app to keep things responsive.  The data for all modules is sourced from three daemonized <a href="https://docs.python.org/2/library/threading.html">threads</a>,
-responsible for information from SSH, HTTP, and SQL.  They are started by server lifecycle hooks described <a href="http://bokeh.pydata.org/en/latest/docs/user_guide/server.html#lifecycle-hooks">here</a>, init when the server is launched, gather data from their respective source, and make it
+responsible for information from SSH, HTTP, and SQL.  They are started by server lifecycle hooks described <a href="https://bokeh.pydata.org/en/latest/docs/user_guide/server.html#lifecycle-hooks">here</a>, init when the server is launched, gather data from their respective source, and make it
 availble to the dashboard.  And since the dashboard gets data from the a general cache, N users are able to share info cached from a single database, SSH, and HTTP connection.  Awesome.  This also allows the dashboard to scale nicely, especially with Tornado's help.</p>
 <h1>Next Steps</h1>
 <p>I didn't have enough time to give the dashboard a memory, so when you log in you can't see anything from previous runs.  My client didn't see this as a dealbreaker, having dedicated plasma screens and projectors for this kind of thing (with some instances showing months of cached data). But it's kind of problematic if anything should happen to those systems, or even the browsers on them.

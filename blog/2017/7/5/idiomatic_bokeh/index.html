@@ -26,7 +26,7 @@
       <div class="container">
         <ul class="navbar-list">
             <li class="navbar-item"><a class="navbar-link" href="/">Home</a></li>
-            <li class="navbar-item"><a class="navbar-link" href="http://bokeh.pydata.org/en/latest">Documentation</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="https://bokeh.pydata.org/en/latest">Documentation</a></li>
             <li class="navbar-item"><a class="navbar-link" href="/blog">Blog</a></li>
         </ul>
       </div>
@@ -72,7 +72,7 @@ Tom Auspurger's recent <a href="https://tomaugspurger.github.io/modern-1.html">M
 series. As a Bokeh developer who has written a lot of Bokeh visualizations,
 I've developed a some personal opinions on best practices for using Bokeh. A
 great resource for following along is the
-<a href="http://bokeh.pydata.org/en/latest/docs/user_guide.html">User Guide</a>
+<a href="https://bokeh.pydata.org/en/latest/docs/user_guide.html">User Guide</a>
 section of the Bokeh documentation.</p>
 <h2>Introduction</h2>
 <p>Let's define some Bokeh terminology before diving into things. In Bokeh, Models
@@ -82,11 +82,11 @@ axes, tools, etc. They are classes that have some defined properties
 some associated event handling (i.e. changing the
 <code>Plot.background_fill_color</code> property will cause the plot to re-render and
 update the background_fill_color).</p>
-<p>Models Reference: <a href="http://bokeh.pydata.org/en/latest/docs/reference/models.html">http://bokeh.pydata.org/en/latest/docs/reference/models.html</a></p>
+<p>Models Reference: <a href="https://bokeh.pydata.org/en/latest/docs/reference/models.html">https://bokeh.pydata.org/en/latest/docs/reference/models.html</a></p>
 <p>Glyphs are a subset of Models and represent Bokeh's plotting primitives-
 the Lines, Circles and Rects that compose visualizations. You could think
 of them as the equivalent to D3's elements.</p>
-<p>Glyphs Reference: <a href="http://bokeh.pydata.org/en/latest/docs/reference/models/glyphs.html">http://bokeh.pydata.org/en/latest/docs/reference/models/glyphs.html</a></p>
+<p>Glyphs Reference: <a href="https://bokeh.pydata.org/en/latest/docs/reference/models/glyphs.html">https://bokeh.pydata.org/en/latest/docs/reference/models/glyphs.html</a></p>
 <p>Bokeh has two main API levels for assemble these Models and Glyphs into
 full-fledged visualization:</p>
 <ul>
@@ -116,7 +116,7 @@ Bokeh visualization is composed - it holds all of axes, grids, glyphs and
 toolbar tools. Additionally, there are a few Plot-specific properties like
 height, width and background color. A good reference for understanding these
 is the <code>Plot</code>
-<a href="http://bokeh.pydata.org/en/latest/docs/reference/models/plots.html#bokeh.models.plots.Plot">documentation</a>.</p>
+<a href="https://bokeh.pydata.org/en/latest/docs/reference/models/plots.html#bokeh.models.plots.Plot">documentation</a>.</p>
 <p>You only have to specify a <code>Plot</code> object's <code>x_range</code> and <code>y_range</code>
 attributes for it to be renderable. Creating a range-only Plot will yield an
 empty rectangle when passed to the <code>bokeh.io.show</code> method, which is exactly
