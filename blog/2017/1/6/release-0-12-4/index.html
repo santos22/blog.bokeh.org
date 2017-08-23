@@ -115,7 +115,8 @@ Encoding this way is already more efficient by itself, but it also means that Bo
         data-bokeh-model-id="adc513b7-d059-423d-9085-81b033f25bb9"
         data-bokeh-doc-id="60c59eb0-d3c5-42eb-96f4-1234555e1010"
     ></script>
-<center></div><p>As can be seen, things could get <strong><em>really</em></strong> bad for image sizes above 500x500. The new binary encoding reduces the time to display drastically.</p>
+<center>
+</div><p>As can be seen, things could get <strong><em>really</em></strong> bad for image sizes above 500x500. The new binary encoding reduces the time to display drastically.</p>
 <p>Finally, during the course of implementing this, Philipp also discovered that the internal logic that prevents Bokeh app events from "boomeranging" between the client and server could be greatly simplified.
 This opened up even more opportunity for performance improvement.</p>
 <p>Another way of visualizing the collective effect of these changes is shown below: A before and after execution log of a running Bokeh app with a periodic callback updating a plot every 100ms. In the before picture, individual events can be seen to be stacking up:</p>
@@ -163,7 +164,8 @@ Now <code>CustomJS</code> callbacks can be added to any property of any Bokeh mo
         id="e938d7b9-355c-4a5f-b605-11621a96bd08"
         data-bokeh-model-id="f8e557d9-4434-466e-8d7c-a510d15cb7e7"
         data-bokeh-doc-id="79464cdd-56e4-43fa-a661-256d89a2cb2f"
-    ></script></div><p>Of course, you might have more interesting real-world use-cases, such as time-series or other windowed data!</p>
+    ></script>
+</div><p>Of course, you might have more interesting real-world use-cases, such as time-series or other windowed data!</p>
 <p>The original motivation for this was actually to be able to have JS callbacks for <code>ColumnDataSource</code> streaming events.
 That's also possible with an expression like this:</p>
 <div class="highlight"><pre><span></span><span class="n">source</span><span class="o">.</span><span class="n">js_on_change</span><span class="p">(</span><span class="s1">&#39;stream&#39;</span><span class="p">,</span> <span class="n">stream_callback</span><span class="p">)</span>
@@ -193,7 +195,7 @@ Recently, more users have been asking for improvements to log plotting, so recen
 <p><a href="https://github.com/bokeh/bokeh/issues/2789">#2789&mdash;Range padding possibly discards the log axis properties</a></p>
 <p><a href="https://github.com/bokeh/bokeh/issues/3834">#3834&mdash;Plot is empty when log scale is used</a></p>
 <p><a href="https://github.com/bokeh/bokeh/issues/5389">#5389&mdash;Creating a line plot with <code>x_axis_type='log'</code> fails when <code>x_max &lt; 1</code></a></p>
-<p><a href="https://github.com/bokeh/bokeh/issues/5549">#5549&mdash;Correctly handle data values <= 0 on a log scale</a></p>
+<p><a href="https://github.com/bokeh/bokeh/issues/5549">#5549&mdash;Correctly handle data values &lt;= 0 on a log scale</a></p>
 <p><a href="https://github.com/bokeh/bokeh/issues/5576">#5576&mdash;Initial range calculation for log plots can cause empty plots</a></p>
 <p>Even more fixes and improvements to log plotting are on the way.</p>
 <h4>What's Next?</h4>
