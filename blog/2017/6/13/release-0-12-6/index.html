@@ -123,8 +123,7 @@ Here is an SVG of the same unemployment example above:</p>
     data-bokeh-model-id="d5ca1cab-a386-491d-ad1c-14b07835f09f"
     data-bokeh-doc-id="8a4d34ae-bf9f-4bcf-a19f-902216d6c453"
 ></script>
-</center>
-</div><p>Future planned improvements include an <code>errorbar</code> function to help make using these annotations even easier.</p>
+</center></div><p>Future planned improvements include an <code>errorbar</code> function to help make using these annotations even easier.</p>
 <p>For good measure, this plot also shows off some new syntax that makes overriding tick formatting a snap. The x-coordinates in the plot number successive trading days. We want to label every fifth value (i.e. every Monday) as a new week, which can now be done easily like this:</p>
 <div class="highlight"><pre><span></span><span class="n">p</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">ticker</span> <span class="o">=</span> <span class="n">mondays</span> <span class="c1"># [0, 5, 10, ...]</span>
 <span class="n">p</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">major_label_overrides</span> <span class="o">=</span> <span class="p">{</span> <span class="n">d</span><span class="p">:</span> <span class="s2">&quot;week </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">mondays</span><span class="p">)}</span>
