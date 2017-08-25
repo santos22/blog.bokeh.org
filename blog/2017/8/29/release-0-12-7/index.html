@@ -72,7 +72,7 @@
 <li>Filterable and groupable <code>ColumnDataSource</code> views.</li>
 <li>Explicit control over plot aspect ratios.</li>
 <li>New <code>Expression</code> models for client-side computations, e.g. <code>Stack</code>.</li>
-<li>New module <code>bokeh.transform</code> with helpers for simplifying <code>DataSpec</code> transforms.</li>
+<li>New <code>bokeh.transform</code> helpers for simplifying <code>DataSpec</code> transforms.</li>
 <li>Improvements for using Bokeh with Categorical data, including hierarchical axes.</li>
 <li>Added <code>hbar_stack</code> and <code>vbar_stack</code> for easy stacked bar charts.</li>
 <li>Integration with JupyterLab</li>
@@ -98,10 +98,9 @@ please consult the
 <a href="https://bokeh.pydata.org/en/0.12.7/docs/releases/0.12.7.html">Release Notes</a>
 carefully.</p>
 </li>
-<li><p>Removal of <code>bokeh.mpl</code> and <code>bokeh.charts</code> is being accelerated. It was planned
-to remove them both at the <code>1.0</code> release, but there have been few comments
-or issues about their deprecation. Instead, they will be removed after this release.
-Doing so will help lighten the burden on the core team during the hectic and busy
+<li><p>Removal of <code>bokeh.mpl</code> and <code>bokeh.charts</code> is accelerated. With almost no comments
+about their deprecation, they will be removed after this release.
+Doing so will help lighten the burden on the core team during the busy
 lead-up to <code>1.0</code>.</p>
 </li>
 <li><p>GitHub user <a href="https://github.com/p-himik">p-himik</a> has been added to <strong><code>@bokeh/dev</code></strong>
@@ -114,27 +113,27 @@ and <a href="https://github.com/bokeh/bokeh/pull/6738"><code>#6738</code></a>.
 We would love to add you too! Come by the <a href="https://gitter.im/bokeh/bokeh-dev">Dev Chat Channel</a>
 to ask about how to get started contributing to Bokeh.</p>
 </li>
-<li><p>All the example and tutorial notebooks in the
-<a href="https://github.com/bokeh/bokeh-notebooks"><code>bokeh/bokeh-notebooks</code></a> repository have
-been revamped, cleaned-up, and brought up to date with current features. You can
-clone the repo to run the notebooks locally, or see statically rendered versions on
+<li><p>All example and tutorial notebooks in
+<a href="https://github.com/bokeh/bokeh-notebooks"><code>bokeh/bokeh-notebooks</code></a> have
+been cleaned up and brought to date with current features. You can
+clone the repository to run the notebooks locally, or see statically rendered versions on
 <a href="https://nbviewer.jupyter.org/github/bokeh/bokeh-notebooks/blob/master/index.ipynb">nbviewer.org</a>.</p>
 </li>
 </ul>
 <p>Now, on to what's new!</p>
 <hr>
 <h4>Network/Graph Visualizations</h4>
-<p>One of the oldest open issues in tracker was
+<p>One of the oldest issues in tracker was
 <a href="https://github.com/bokeh/bokeh/issues/187">#187 &mdash; Support graphs/trees/networks</a>
-from way back in 2013. I am happy to report that all pieces that were needed finally
+from way back in 2013. I am happy to report that all the necessary pieces finally
 became available, and core dev <a href="https://github.com/canavandl">canavandl</a> put them
 together to add the long-awaited feature to Bokeh! This includes flexible and
 extensible policies for highlighting and selection, as seen in the examples below:</p>
 <center><h5><strong><em>[ EXAMPLES HERE ]</em></strong></h5></center><p>Check out the new User's Guide section
 <a href="http://bokeh.pydata.org/en/0.12.7/docs/user_guide/graph.html">Visualizing Network Graphs</a>
-for documentation and examples. Note that Bokeh itself is suitable for small to
-mid-sized graphs. But if you have very large graphs, help is on the way from
-<a href="https://datashader.readthedocs.io/en/latest/">Datashader</a>. There is also ongoing work to
+for docs and examples. Note that Bokeh itself is suitable for small to
+mid-sized graphs. However, if you have very large graphs, help is on the way from
+<a href="https://datashader.readthedocs.io/en/latest/">Datashader</a>. Ongoing work will
 make the two projects play well together, so interactive exploration of large graphs
 across different scales is seamless.</p>
 <h4>Aspect Ratio Control</h4>
@@ -143,7 +142,7 @@ across different scales is seamless.</p>
 The lack of this feature spawned bug reports such as
 <a href="https://github.com/bokeh/bokeh/issues/517">#517</a>,
 <a href="https://github.com/bokeh/bokeh/issues/6603">#6603</a>, and many others over the years.
-I am happy to report that this is has been closed by <strong>brand new contributor</strong>
+I am happy to say that this is has been closed by <strong>brand new contributor</strong>
 <a href="https://github.com/DuCorey">DuCorey</a>. Now, if you'd like to have auto-ranged
 data bounds match the pixel aspect ratio of the axes, it's as simple as:</p>
 <div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">figure</span><span class="p">(</span><span class="n">match_aspect</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -171,19 +170,23 @@ create:</p>
     <td rowspan="3"><img src="interval.png" style="max-height:100%; max-width:100%"></td>
   </tr>
   <tr>
-    <td colspan="2"><img src="simple_bar.png" style="max-height:100%; max-width:100%"></td>
+    <td colspan="1"><img src="simple_bar.png" style="max-height:100%; max-width:100%"></td>
   </tr>
   <tr>
-    <td colspan="2"><img src="stacked_bar.png" style="max-height:100%; max-width:100%"></td>
+    <td colspan="1"><img src="stacked_bar.png" style="max-height:100%; max-width:100%"></td>
   </tr>
   <tr>
-    <td colspan="3"><img src="grouped_bar.png" style="max-height:100%; max-width:100%"></td>
+    <td colspan="2"><img src="grouped_bar.png" style="max-height:100%; max-width:100%"></td>
   </tr>
   <tr>
-    <td colspan="3"><img src="jitter_scatter.png" style="max-height:100%; max-width:100%"></td>
+    <td colspan="1"><img src="mixed_bar.png" style="max-height:100%; max-width:100%"></td>
+    <td colspan="1"><img src="split_bar.png" style="max-height:100%; max-width:100%"></td>
+  </tr>
+  <tr>
+    <td colspan="2"><img src="jitter_scatter.png" style="max-height:100%; max-width:100%"></td>
   </tr></table><p><em>(Note: all the images were made with the <a href="http://bokeh.pydata.org/en/dev/docs/user_guide/export.html#png-generation"><code>export_png</code></a> function added last release!)</em></p>
 <p>Some of the improvements are foundational enhancements, such as the ability to
-specify (and display axes for) hierarchical categories. Other improvements come in
+specify (and display axes for) hierarchical categories. Others come in
 the form of new convenience API, such as the <code>jitter</code>, <code>dodge</code> and <code>factor_cmap</code> functions,
 or the <code>hbar_stack</code> and <code>vbar_stack</code> glyph methods that make stacking bars trivial:</p>
 <div class="highlight"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Apples&#39;</span><span class="p">,</span> <span class="s1">&#39;Pears&#39;</span><span class="p">,</span> <span class="s1">&#39;Nectarines&#39;</span><span class="p">,</span> <span class="s1">&#39;Plums&#39;</span><span class="p">,</span> <span class="s1">&#39;Grapes&#39;</span><span class="p">,</span> <span class="s1">&#39;Strawberries&#39;</span><span class="p">]</span>
