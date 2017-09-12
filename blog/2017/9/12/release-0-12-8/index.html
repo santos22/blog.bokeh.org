@@ -17,7 +17,7 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
-<title>Bokeh 0.12.8 Released | Bokeh Org</title>
+<title>Bokeh 0.12.9 Released | Bokeh Org</title>
 
 </head>
 <body>
@@ -43,7 +43,7 @@
       <div class="eleven columns">
         
       <div class="meta-bar">
-        <h1>Bokeh 0.12.8 Released</h1>
+        <h1>Bokeh 0.12.9 Released</h1>
         <p class="meta">
           by
           
@@ -65,7 +65,7 @@
     <div class="row">
       <div class="eleven columns">
         <div class="text-block text-block-default">
-  <p>Hot on the heels of 0.12.7, we are pleased to announce the release of Bokeh 0.12.8!</p>
+  <p>Hot on the heels of the last version, we are pleased to announce the release of Bokeh 0.12.9!</p>
 <p>This update includes the following important new features:</p>
 <ul>
 <li>Integration with JupyterLab</li>
@@ -73,14 +73,26 @@
 </ul>
 <p>This release also contains several bugfixes and docs additions.
 For full details, see the <a href="https://github.com/bokeh/bokeh/blob/master/CHANGELOG">CHANGELOG</a>
-and <a href="https://bokeh.pydata.org/en/0.12.8/docs/releases/0.12.8.html">Release Notes</a>.
-Additioanlly, examples for each release are uploaded to CDN.
-<a href="https://cdn.pydata.org/bokeh/examples/examples-0.12.8.zip">Click here to download</a>.</p>
+and <a href="https://bokeh.pydata.org/en/0.12.9/docs/releases/0.12.9.html">Release Notes</a>.
+Additionally, examples for each release are uploaded to CDN.
+<a href="https://cdn.pydata.org/bokeh/examples/examples-0.12.9.zip">Click here to download</a>.</p>
 <hr>
 <p>If you are using
 <a href="https://www.anaconda.com/downloads">Anaconda</a>, Bokeh can most easily be installed
 by executing the command <code>conda install -c bokeh bokeh</code> . Otherwise, use
 <code>pip install bokeh</code>.</p>
+<hr>
+<p>First a quick note. You may have noticed that this announcement is not for 0.12.8
+as expected. Last night, about 10 minutes after the release build finished,
+a <a href="https://github.com/bokeh/bokeh/issues/6922">showstopper issue was discovered</a>.
+A "re-release" was attempted but was not possible. So here we are, early, at 0.12.9!</p>
+<p>This problem was caught by the extremely astute and eager user
+<a href="https://github.com/pierretherenard">@Pierretherenard</a>. I very much appreciate their
+help late last night to resolve things, and
+also want stress: if you are an active Bokeh user, <strong>please always help us test by installing
+and trying out <a href="https://bokeh.pydata.org/en/latest/docs/installation.html#developer-builds">dev builds and release candidates</a>.</strong> The more eyes there are on things, the
+more likely issues can be caught earlier, and that is better for everyone.</p>
+<p>Now on to the fun bits!</p>
 <hr>
 <h4>JupyterLab Integration</h4>
 <p>In case you missed it, the first ever <a href="https://conferences.oreilly.com/jupyter/jup-ny">JupyterCon</a> was recently held in New York. One of the big topics of discussion there
@@ -151,7 +163,7 @@ about twenty five lines of pure python:</p>
 <p>In order to make some improvements for the long term, a few small, immediate
 breaking changes were unavoidable. It is not expected they will affect many users, but
 please consult the
-<a href="https://bokeh.pydata.org/en/0.12.8/docs/releases/0.12.8.html">Release Notes</a>
+<a href="https://bokeh.pydata.org/en/0.12.9/docs/releases/0.12.9.html">Release Notes</a>
 carefully.</p>
 <p>As of this Release, Python 3.4 support is no longer maintained under test. Python 2.7
 and 3.5+ are the officially supported versions. It is very likely that Bokeh will
@@ -202,6 +214,10 @@ interested in helping out, drop by the <a href="https://gitter.im/bokeh/bokeh-de
     <div class="container">
       <div class="row">
         <div class="eight columns">
+        
+          <div class="nav-prev">
+            <a href="../../../../../blog/2017/8/29/release-0-12-7/">Previous: Bokeh 0.12.7 Released</a>
+          </div>
         
         
         </div>
