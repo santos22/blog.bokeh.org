@@ -1,0 +1,223 @@
+<!doctype html>
+<meta charset="utf-8">
+<head>
+
+<link rel="stylesheet" href="../../../../../static/normalize.css">
+<link rel="stylesheet" href="../../../../../static/skeleton.css">
+<link rel="stylesheet" href="../../../../../static/style.css">
+<link rel="stylesheet" href="../../../../../static/gen/styles.css">
+<link rel="stylesheet" href="../../../../../static/custom.css">
+<link rel="stylesheet" href="../../../../../static/pygments.css">
+
+<!-- Mobile Specific Metas
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- FONT
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+<title>Bokeh 0.13.0 Released | Bokeh Org</title>
+
+</head>
+<body>
+    <div class="navbar-spacer"></div>
+    <nav class="navbar">
+      <div class="container">
+        <ul class="navbar-list">
+            <li class="navbar-item"><a class="navbar-link" href="/">Home</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="https://bokeh.pydata.org/en/latest">Documentation</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="/blog">Blog</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="body-wrapper">
+      
+  <div class="blog-post">
+    
+  
+    
+  <div class="container">
+    <div class="row">
+      <div class="eleven columns">
+        
+      <div class="meta-bar">
+        <h1>Bokeh 0.13.0 Released</h1>
+        <p class="meta">
+          by
+          
+            Bryan Van de Ven
+          
+          on Wednesday, June 13, 2018
+        </p>
+      </div>
+    
+      </div>
+    </div>
+  </div>
+
+  
+  
+    
+      
+  <div class="container">
+    <div class="row">
+      <div class="eleven columns">
+        <div class="text-block text-block-default">
+  <p>We are pleased to announce the release of Bokeh 0.13.0!</p>
+<p>This release has the following highlights:</p>
+<ul>
+<li>Bokeh app components are embeddable in custom templates <a href="https://github.com/bokeh/bokeh/issues/4986"><code>#4986</code></a>, <a href="https://github.com/bokeh/bokeh/issues/7978"><code>#7978</code></a></li>
+<li>New RangeTool added for selecting ranges interactively <a href="https://github.com/bokeh/bokeh/issues/7795"><code>#7795</code></a></li>
+<li>Max websocket message size now configurable <a href="https://github.com/bokeh/bokeh/issues/7374"><code>#7374</code></a></li>
+<li>Significant performance improvement for property validation <a href="https://github.com/bokeh/bokeh/issues/7977"><code>#7977</code></a></li>
+<li>Added <code>cumsum</code> transform to cumulatively sum CDS columns <a href="https://github.com/bokeh/bokeh/issues/7961"><code>#7961</code></a></li>
+<li>Simplified hover tool usage <a href="https://github.com/bokeh/bokeh/pull/7921"><code>#7921</code></a></li>
+<li>DataTable regressions fixed <a href="https://github.com/bokeh/bokeh/issues/7891"><code>#7891</code></a>, <a href="https://github.com/bokeh/bokeh/issues/7924"><code>#7924</code></a></li>
+</ul>
+<p>Plus several other bug fixes and documentation improvements.
+For full details, see the <a href="https://github.com/bokeh/bokeh/blob/master/CHANGELOG">CHANGELOG</a>
+and <a href="https://bokeh.pydata.org/en/latest/docs/releases.html">Release Notes</a>.
+Additionally, examples for each release are uploaded to CDN.
+<a href="https://cdn.pydata.org/bokeh/examples/examples-0.13.0.zip">Click here to download</a>.</p>
+<hr>
+<p>If you are using
+<a href="https://www.anaconda.com/downloads">Anaconda</a>, Bokeh can most easily be installed
+by executing the command <code>conda install -c bokeh bokeh</code> . Otherwise, use
+<code>pip install bokeh</code>.</p>
+<hr>
+<h4>Upcoming 1.0</h4>
+<p>Bokeh development has reached a point of stability.
+The core feature set is largely complete with respect to the original roadmap.
+There is still plenty of work to do&mdash;expanding test coverage,
+improving documentation, fixing lots of bugs, and adding some new features.
+However, the API is now in a place that the core team is happy with and prepared
+to defend over a longer term. In recognition of this:</p>
+<center><h5><b>The next release will be Bokeh 1.0</b></h5></center><p>We will spend a short period of time working on some high priority tasks, and
+making some necessary changes to our build and release infrastructure. We can use
+help during this time! There will be more frequent <code>1.0.0dev</code> releases in this time,
+please help test with them as much as possible. Of course, any code or documentation
+help is also still very appreciated. Come by the <a href="https://gitter.im/bokeh/bokeh-dev">Gitter "Dev" channel</a>
+and ask about how to get started.</p>
+<h4>Improved Support for Custom Templates</h4>
+<h4>Range Selection Tool</h4>
+<div class="highlight"><pre><span></span><span class="c1"># This tool will control the x range on `plot`</span>
+<span class="n">range_rool</span> <span class="o">=</span> <span class="n">RangeTool</span><span class="p">(</span><span class="n">x_range</span><span class="o">=</span><span class="n">plot</span><span class="o">.</span><span class="n">x_range</span><span class="p">)</span>
+</pre></div>
+<div>
+<center>
+<script src="range_tool.js" id="de5c16af-866c-4d08-b2d1-16aff1136119"></script>
+</center></div><h4>New Cumulative Sum Transform</h4>
+<div class="highlight"><pre><span></span><span class="n">pie</span><span class="o">.</span><span class="n">wedge</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span>
+          <span class="n">line_color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s1">&#39;color&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="s1">&#39;country&#39;</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="n">data</span>
+
+          <span class="c1"># Use a cumulative sum on the angles to compute start/end</span>
+          <span class="n">start_angle</span><span class="o">=</span><span class="n">cumsum</span><span class="p">(</span><span class="s1">&#39;angle&#39;</span><span class="p">,</span> <span class="n">include_zero</span><span class="o">=</span><span class="bp">True</span><span class="p">),</span> <span class="n">end_angle</span><span class="o">=</span><span class="n">cumsum</span><span class="p">(</span><span class="s1">&#39;angle&#39;</span><span class="p">))</span>
+</pre></div>
+<div>
+<center>
+<script src="pie.js" id="f84a0c6d-6a64-4018-87ca-cf531af7991b"></script>
+</center></div><h4>Hover Tooltip Improvements</h4>
+<div class="highlight"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Apples&#39;</span><span class="p">,</span> <span class="s1">&#39;Pears&#39;</span><span class="p">,</span> <span class="s1">&#39;Nectarines&#39;</span><span class="p">,</span> <span class="s1">&#39;Plums&#39;</span><span class="p">,</span> <span class="s1">&#39;Grapes&#39;</span><span class="p">,</span> <span class="s1">&#39;Strawberries&#39;</span><span class="p">]</span>
+<span class="n">years</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;2015&quot;</span><span class="p">,</span> <span class="s2">&quot;2016&quot;</span><span class="p">,</span> <span class="s2">&quot;2017&quot;</span><span class="p">]</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;#c9d9d3&quot;</span><span class="p">,</span> <span class="s2">&quot;#718dbf&quot;</span><span class="p">,</span> <span class="s2">&quot;#e84d60&quot;</span><span class="p">]</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fruits&#39;</span> <span class="p">:</span> <span class="n">fruits</span><span class="p">,</span>
+        <span class="s1">&#39;2015&#39;</span>   <span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+        <span class="s1">&#39;2016&#39;</span>   <span class="p">:</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
+        <span class="s1">&#39;2017&#39;</span>   <span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">]}</span>
+
+<span class="c1"># The &quot;$name&quot; variable shows the hovered glyphs&#39;s name property (i.e. a year)</span>
+<span class="c1"># and the variable &quot;@$name&quot; looks up a column of the same name</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">figure</span><span class="p">(</span><span class="n">x_range</span><span class="o">=</span><span class="n">fruits</span><span class="p">,</span> <span class="n">plot_height</span><span class="o">=</span><span class="mi">250</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Fruit Counts by Year&quot;</span><span class="p">,</span>
+           <span class="n">toolbar_location</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">tools</span><span class="o">=</span><span class="s2">&quot;hover&quot;</span><span class="p">,</span> <span class="n">tooltips</span><span class="o">=</span><span class="s2">&quot;$name @fruits: @$name&quot;</span><span class="p">)</span>
+
+<span class="c1"># Each sub-renderer has &quot;name&quot; property set (to a year) automatically</span>
+<span class="n">p</span><span class="o">.</span><span class="n">vbar_stack</span><span class="p">(</span><span class="n">years</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;fruits&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
+             <span class="n">legend</span><span class="o">=</span><span class="p">[</span><span class="n">value</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">years</span><span class="p">])</span>
+</pre></div>
+<div>
+<center>
+<script src="hover.js" id="edb464e0-87a0-4b5b-a96e-a050a34cf9c8"></script>
+</center></div><h4>NumFocus Committee Change</h4>
+<p>When Bokeh was first applying for NumFocus fiscal sponsorship, Jake Vanderplas
+genererously stepped in to help round out the required project committee.
+Recently it became possible for long-time Bokeh contributor
+<a href="https://github.com/canavandl">Luke Canavan</a> to join the committee, so Jake is
+stepping aside. Thanks Jake, and welcome Luke!</p>
+<hr>
+<p>I'd like to thank the <a href="https://github.com/bokeh/bokeh/graphs/contributors">298 total contributors</a>
+who have helped make Bokeh such an amazing project. If you're interested in
+helping out, drop by the <a href="https://gitter.im/bokeh/bokeh-dev">Dev Chat Channel</a>!</p>
+<p>Thanks,</p>
+<p>Bryan Van de Ven</p>
+
+</div>
+      </div>
+    </div>
+  </div>
+
+    
+  
+
+
+    
+    
+    
+    <div class="container">
+      <div class="row">
+        <div class="eight columns">
+        
+        
+        </div>
+      </div>
+    </div>
+  </div>
+
+    </div>
+
+    
+    <div class="bottomsummary">
+      <div class="container">
+      </div>
+    </div>
+    
+
+    
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="four columns icon-bar">
+            <a href="https://github.com/bokeh/bokeh/" title="Bokeh on GitHub"
+              ><i class="fa fa-github"></i></a>
+            <a href="https://github.com/bokeh/bokeh/issues/" title="Report Issues for Bokeh"
+              ><i class="fa fa-bug"></i></a>
+            <a href="https://twitter.com/BokehPlots" title="Find Bokeh on Twitter"
+              ><i class="fa fa-twitter"></i></a>
+            <a href="https://gitter.im/bokeh/bokeh" title="Chat on Gitter"
+              ><i class="fa fa-comment"></i></a>
+            <a href="https://github.com/bokeh/bokeh.github.io/tree/source/content/blog/release-0-13-0/contents.lr" title="View source for this page"><i class="fa fa-code"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+
+<!-- JS
+================================================== -->
+<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-27761864-7', 'pydata.org');
+  ga('user.set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+</script>
+
+</body>
