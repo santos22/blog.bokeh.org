@@ -114,26 +114,26 @@ for allowing users to zoom in on long time series plots:</p>
 <div>
 <center>
 <script src="range_tool.js" id="57c9e703-b1a1-466d-8a88-bbe0af0eeaaa"></script>
-</center></div><p>It's also possible to configure the tool with both an <code>x_range</code> and a <code>y_range</code> a the
+</center></div><p>It's also possible to configure the tool with both an <code>x_range</code> and a <code>y_range</code> at the
 same time, in which case the overlay is a box that can be dragged and resized in both
 horizontal and vertical directions.</p>
 <h4>New Cumulative Sum Transform</h4>
-<p>A new <code>cumsum</code> transform was added to <code>bokeh.transorms</code>. This transform generates a
+<p>A new <code>cumsum</code> transform was added to <code>bokeh.transforms</code>. This transform generates a
 sequence of cumulative sums from the values in a <code>ColumnDataSource</code> column. This can be
 useful for simplifying any plot that needs to position things based on running totals, such
 as pie or donut charts:</p>
-<div class="highlight"><pre><span></span><span class="n">pie</span><span class="o">.</span><span class="n">wedge</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span>
-          <span class="n">line_color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s1">&#39;color&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="s1">&#39;country&#39;</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="n">data</span>
+<div class="highlight"><pre><span></span><span class="n">p</span><span class="o">.</span><span class="n">wedge</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span>
+        <span class="n">line_color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s1">&#39;color&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="s1">&#39;country&#39;</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="n">data</span>
 
-          <span class="c1"># Use a cumulative sum on the angles to compute start/end</span>
-          <span class="n">start_angle</span><span class="o">=</span><span class="n">cumsum</span><span class="p">(</span><span class="s1">&#39;angle&#39;</span><span class="p">,</span> <span class="n">include_zero</span><span class="o">=</span><span class="bp">True</span><span class="p">),</span> <span class="n">end_angle</span><span class="o">=</span><span class="n">cumsum</span><span class="p">(</span><span class="s1">&#39;angle&#39;</span><span class="p">))</span>
+        <span class="c1"># Use a cumulative sum on the angles to compute start/end</span>
+        <span class="n">start_angle</span><span class="o">=</span><span class="n">cumsum</span><span class="p">(</span><span class="s1">&#39;angle&#39;</span><span class="p">,</span> <span class="n">include_zero</span><span class="o">=</span><span class="bp">True</span><span class="p">),</span> <span class="n">end_angle</span><span class="o">=</span><span class="n">cumsum</span><span class="p">(</span><span class="s1">&#39;angle&#39;</span><span class="p">))</span>
 </pre></div>
 <div>
 <center>
 <script src="pie.js" id="cc1d0eea-3619-4f3f-9cfa-245b02781b60"></script>
 </center></div><h4>Hover Tooltip Improvements</h4>
 <p>The hover tool has had some limitations in some circumstances in the past.
-Specfically, users have wanted to display a hover name depending on the glyphs
+Specfically, users have wanted to display a hover name depending on the glyph
 that is hovered over. Previously, this would require creating and sending an
 entire column filled with the name, which is wasteful and redundant. Now, the
 <code>name</code> property of a glyph may be displayed in a hover tooltip by using the new
@@ -142,12 +142,13 @@ entire column filled with the name, which is wasteful and redundant. Now, the
 <span class="n">p</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">)</span>  <span class="c1"># and displays &quot;bar&quot; over these</span>
 </pre></div>
 <p>Additionally, there were some difficultes with stacked charts. Basically, there was
-no easy way to have the different glyphs for each stack refer to different columns.
+no easy way to have the different glyphs for each stack level refer to different columns.
 Before, the only way to accomplish this was to create a separate new <code>HoverTool</code> for each stack layer.
 Now, there is a way to add some indirection, by using the column variable <code>@$name</code>.
-This syntax means: use the <code>name</code> property of the glyph as the column name to display
+This syntax means: use the value of <code>$name</code> to specify the column name to display
 in the tooltip. Stack methods such as <code>vbar_stack</code> also
-now automatically set <code>name</code> of each renderer to the corresponding stack value.</p>
+now automatically set <code>name</code> of each renderer to the corresponding stack value, to make
+things even simpler:</p>
 <div class="highlight"><pre><span></span><span class="n">regions</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;East&quot;</span><span class="p">,</span> <span class="s2">&quot;Central&quot;</span><span class="p">,</span> <span class="s2">&quot;West&quot;</span><span class="p">)</span>
 
 <span class="c1"># The glyph for each stack level will set name to a different region,</span>
