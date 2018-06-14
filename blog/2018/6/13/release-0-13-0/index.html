@@ -125,16 +125,15 @@ several components placed individually inside a Bootstrap dashboard layout templ
 
 <span class="n">curdoc</span><span class="p">()</span><span class="o">.</span><span class="n">add_root</span><span class="p">(</span><span class="n">plot</span><span class="p">)</span>
 </pre></div>
-<p>Then in the Jinja template, those roots can be referred to in blocks like this:</p>
+<p>Then, those roots can be referred to in your own Jinja template
+blocks like this:</p>
 <div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-md-4 col-sm-4 col-xs-12&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;x_panel tile fixed_height_320 overflow_hidden&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;x_title&quot;</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>By Region<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;clearfix&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;x_content&quot;</span><span class="p">&gt;</span>
-      {{ embed(roots.region) }}
-    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    {{ embed(roots.region) }}
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </pre></div>
