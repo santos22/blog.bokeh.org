@@ -100,7 +100,42 @@ help during this time! There will be more frequent <code>1.0.0dev</code> release
 please help test with them as much as possible. Of course, any code or documentation
 help is also still very appreciated. Come by the <a href="https://gitter.im/bokeh/bokeh-dev">Gitter "Dev" channel</a>
 and ask about how to get started.</p>
+<p>For those curious: the reason for the version bump to 13 now after such a long <code>0.12.x</code> series
+it that some build and deployment infrastructure switched over to NumFocus assets, and
+we wanted to have a clear demaraction of that switchover.</p>
 <h4>Improved Support for Custom Templates</h4>
+<p>When Bokeh was started, we had a grand ambition of being able to work purely from Python,
+"No web-tech required!" To that end we built a layout system that can be used to construct
+web UIs with rows and columns and grids of things. And it works reasonably well for simple
+things. If you are prioritizing ease-of-use it can even do for some less simple things.
+But inevitably, users wanted to use Bokeh for very sophisticated layouts that&mdash;more
+sophisticated than the built-in layout can handle.</p>
+<p>Until now, only Bokeh standalone documents could flexibly embed individual plots and widgets,
+using the <code>components</code> function. Bokeh applications were constrained to use only a single top-level Bokeh
+layout, and this proved to be extremely limiting for users that wished to build sophisticated
+dashboards with Bokeh. With the release of <code>0.13.0</code>, it
+is now possible to embed individual application components as well. As an example, here is a Bokeh app with
+several components placed individually inside a Bootstrap dashboard layout template:</p>
+<div class="image"><center><img src="dash.png" width="90%"></center></div><p>In this case we add roots to the document that have a <code>name</code> property set:</p>
+<div class="highlight"><pre><span></span><span class="n">plot</span> <span class="o">=</span> <span class="n">figure</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">sizing_mode</span><span class="o">=</span><span class="s2">&quot;scale_both&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;region&quot;</span><span class="p">)</span>
+
+<span class="n">curdoc</span><span class="p">()</span><span class="o">.</span><span class="n">add_root</span><span class="p">(</span><span class="n">plot</span><span class="p">)</span>
+</pre></div>
+<p>Then in the Jinja template, those roots can be referred to in blocks like this:</p>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-md-4 col-sm-4 col-xs-12&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;x_panel tile fixed_height_320 overflow_hidden&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;x_title&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>By Region<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;clearfix&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;x_content&quot;</span><span class="p">&gt;</span>
+      {{ embed(roots.region) }}
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+<p>To be sure, there are still issues and kinks to work out. But this advances the possibilities
+for Bokeh applications a long way, and we look forward to seeing what users come up with!</p>
 <h4>Range Selection Tool</h4>
 <p>It's always nice when a very old issue can be closed, and I am happy to report that the
 long standing request for a "range" tool has been completed. It is now possible to create
