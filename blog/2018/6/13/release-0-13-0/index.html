@@ -9,6 +9,10 @@
 <link rel="stylesheet" href="../../../../../static/custom.css">
 <link rel="stylesheet" href="../../../../../static/pygments.css">
 
+<!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="icon" type="image/png" href="/favicon.ico">
+
 <!-- Mobile Specific Metas
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -66,7 +70,7 @@
       <div class="eleven columns">
         <div class="text-block text-block-default">
   <p>We are pleased to announce the release of Bokeh 0.13.0!</p>
-<p>This release has the following highlights:</p>
+<p>Highlights include:</p>
 <ul>
 <li>Bokeh app components are embeddable in custom templates <a href="https://github.com/bokeh/bokeh/issues/4986"><code>#4986</code></a>, <a href="https://github.com/bokeh/bokeh/issues/7978"><code>#7978</code></a></li>
 <li>New RangeTool added for selecting ranges interactively <a href="https://github.com/bokeh/bokeh/issues/7795"><code>#7795</code></a></li>
@@ -89,20 +93,20 @@ by executing the command <code>conda install -c bokeh bokeh</code> . Otherwise, 
 <hr>
 <h4>Upcoming 1.0</h4>
 <p>Bokeh development has reached a point of stability.
-The core feature set is largely complete with respect to the original roadmap.
-There is still plenty of work to do&mdash;expanding test coverage,
-improving documentation, fixing lots of bugs, and adding some new features.
-However, the API is now in a place that the core team is happy with and prepared
-to defend over a longer term. In recognition of this:</p>
+While there is still plenty of work to be done (expanding test coverage,
+improving documentation,  fixing lots of bugs, and adding new features), the
+core feature set is largely complete with respect to the original roadmap.
+Most importantly, the API is now in a place that the core team is happy
+with and prepared to defend over a longer term. In recognition of this development:</p>
 <center><h5><b>The next release will be Bokeh 1.0</b></h5></center><p>We will spend a short period of time working on some high priority tasks, and
 making some necessary changes to our build and release infrastructure. We can use
 help during this time! There will be more frequent <code>1.0.0dev</code> releases in this time,
 please help test with them as much as possible. Of course, any code or documentation
 help is also still very appreciated. Come by the <a href="https://gitter.im/bokeh/bokeh-dev">Gitter "Dev" channel</a>
 and ask about how to get started.</p>
-<p>For those curious: the reason for the version bump to 13 now after such a long <code>0.12.x</code> series
+<p><em>For those curious: the reason for the version bump to 13 now after such a long <code>0.12.x</code> series
 it that some build and deployment infrastructure switched over to NumFocus assets, and
-we wanted to have a clear demaraction of that switchover.</p>
+we wanted to have a clear demaraction of that switchover.</em></p>
 <h4>Improved Support for Custom Templates</h4>
 <p>When Bokeh was started, we had a grand ambition of being able to work purely from Python,
 "No web-tech required!" To that end we built a layout system that can be used to construct
