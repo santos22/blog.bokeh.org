@@ -105,14 +105,14 @@ please help test with them as much as possible. Of course, any code or documenta
 help is also still very appreciated. Come by the <a href="https://gitter.im/bokeh/bokeh-dev">Gitter "Dev" channel</a>
 and ask about how to get started.</p>
 <p><em>For those curious: the reason for the version bump to 13 now after such a long <code>0.12.x</code> series
-it that some build and deployment infrastructure switched over to NumFocus assets, and
+is that some build and deployment infrastructure switched over to NumFocus assets, and
 we wanted to have a clear demarcation of that switchover.</em></p>
 <h4>Improved Support for Custom Templates</h4>
 <p>When Bokeh was started, we had a grand ambition of being able to work purely from Python,
 "No web-tech required!" To that end we built a layout system that can be used to construct
 web UIs with rows and columns and grids of things. And it works reasonably well for simple
 things. If you are prioritizing ease-of-use it can even do for some less simple things.
-But inevitably, users wanted to use Bokeh for very sophisticated layouts that&mdash;more
+But inevitably, users wanted to use Bokeh for very sophisticated layouts&mdash;more
 sophisticated than the built-in layout can handle.</p>
 <p>Until now, only Bokeh standalone documents could flexibly embed individual plots and widgets,
 using the <code>components</code> function. Bokeh applications were constrained to use only a single top-level Bokeh
@@ -137,6 +137,10 @@ blocks like this:</p>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </pre></div>
+<p>You find the code for this example
+<a href="https://github.com/bokeh/bokeh/tree/master/examples/app/dash">in the GitHub respitory</a>.
+The User's Guide also has a new section describing a <a href="https://bokeh.pydata.org/en/latest/docs/user_guide/embed.html#standard-template">standard template</a>
+that anyone can use to quickly get started.</p>
 <p>To be sure, there are still issues and kinks to work out. But this advances the possibilities
 for Bokeh applications a long way, and we look forward to seeing what users come up with!</p>
 <h4>Range Selection Tool</h4>
