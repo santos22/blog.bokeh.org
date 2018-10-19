@@ -1,0 +1,182 @@
+<!doctype html>
+<meta charset="utf-8">
+<head>
+
+<link rel="stylesheet" href="../../../../../static/normalize.css">
+<link rel="stylesheet" href="../../../../../static/skeleton.css">
+<link rel="stylesheet" href="../../../../../static/style.css">
+<link rel="stylesheet" href="../../../../../static/gen/styles.css">
+<link rel="stylesheet" href="../../../../../static/custom.css">
+<link rel="stylesheet" href="../../../../../static/pygments.css">
+
+<!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="icon" type="image/png" href="/favicon.ico">
+
+<!-- Mobile Specific Metas
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- FONT
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+<title>Bokeh 1.0 Released | Bokeh Org</title>
+
+</head>
+<body>
+    <div class="navbar-spacer"></div>
+    <nav class="navbar">
+      <div class="container">
+        <ul class="navbar-list">
+            <li class="navbar-item"><a class="navbar-link" href="/">Home</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="https://bokeh.pydata.org/en/latest">Documentation</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="/blog">Blog</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="body-wrapper">
+      
+  <div class="blog-post">
+    
+  
+    
+  <div class="container">
+    <div class="row">
+      <div class="eleven columns">
+        
+      <div class="meta-bar">
+        <h1>Bokeh 1.0 Released</h1>
+        <p class="meta">
+          by
+          
+            Bryan Van de Ven
+          
+          on Monday, October 22, 2018
+        </p>
+      </div>
+    
+      </div>
+    </div>
+  </div>
+
+  
+  
+    
+      
+  <div class="container">
+    <div class="row">
+      <div class="eleven columns">
+        <div class="text-block text-block-default">
+  <p><em><small>&lt; clears throat &gt; Well... here we are at last.</small></em></p>
+<p>We are pleased to announce the release of Bokeh 1.0!</p>
+<p>Highlights include:</p>
+<ul>
+<li>Support for <code>MultiPolygons</code> with holes <a href="https://github.com/bokeh/bokeh/issues/2321"><code>#2321</code></a></li>
+<li>Fixes and improvements to <code>DataTable</code> <a href="https://github.com/bokeh/bokeh/pull/6454"><code>#6454</code></a>, <a href="https://github.com/bokeh/bokeh/pull/7116"><code>#7116</code></a>, <a href="https://github.com/bokeh/bokeh/pull/7417"><code>#7417</code></a>, <a href="https://github.com/bokeh/bokeh/pull/8021"><code>#8021</code></a>, <a href="https://github.com/bokeh/bokeh/pull/8040"><code>#8040</code></a>, <a href="https://github.com/bokeh/bokeh/pull/8309"><code>#8050</code></a>, <a href="https://github.com/bokeh/bokeh/pull/8201"><code>#8201</code></a></li>
+<li><code>CustomAction</code> for user-defined Toolbar buttons <a href="https://github.com/bokeh/bokeh/issues/8099"><code>#8099</code></a></li>
+<li>Option to auto-hide toolbars <a href="https://github.com/bokeh/bokeh/pull/8284"><code>#8284</code></a></li>
+<li><code>Scatter</code> glyph for parameterizable marker type <a href="https://github.com/bokeh/bokeh/issues/5884"><code>#5884</code></a></li>
+<li>Reuse webdrivers for faster PNG/SVG export by default <a href="https://github.com/bokeh/bokeh/pull/8329"><code>#8329</code></a></li>
+<li>Improved testing capabilities <a href="https://github.com/bokeh/bokeh/pull/2596"><code>#2596</code></a>, <a href="https://github.com/bokeh/bokeh/pull/8078"><code>#8078</code></a>, <a href="https://github.com/bokeh/bokeh/pull/8139"><code>#8139</code></a>, <a href="https://github.com/bokeh/bokeh/pull/8146"><code>#8146</code></a>, <a href="https://github.com/bokeh/bokeh/pull/8217"><code>#8217</code></a>, <a href="https://github.com/bokeh/bokeh/pull/8225"><code>#8225</code></a></li>
+<li>Faster import times <a href="https://github.com/bokeh/bokeh/pull/8309"><code>#8309</code></a></li>
+</ul>
+<p>Plus several other bug fixes and documentation improvements.
+For full details, see the <a href="https://github.com/bokeh/bokeh/blob/master/CHANGELOG">CHANGELOG</a>
+and <a href="https://bokeh.pydata.org/en/latest/docs/releases.html">Release Notes</a>.
+Additionally, examples for each release are uploaded to CDN.
+<a href="https://cdn.pydata.org/bokeh/examples/examples-1.0.0.zip">Click here to download</a>.</p>
+<hr>
+<p>If you are using
+<a href="https://www.anaconda.com/downloads">Anaconda</a>, Bokeh can most easily be installed
+by executing the command <code>conda install -c bokeh bokeh</code> . Otherwise, use
+<code>pip install bokeh</code>.</p>
+<hr>
+<h4>What 1.0 Means</h4>
+<h4>Patches With Holes</h4>
+<h4>A New Scatter</h4>
+<h4>Just Toolbar Things</h4>
+<h4>Testing, Testing...</h4>
+<hr>
+<h5>Gracias धन्यवाद  Cпасибо 谢谢 Obrigado شكرا Danke ありがとう Merci</h5>
+<p>I'd like to thank the <a href="https://github.com/bokeh/bokeh/graphs/contributors">322 total contributors</a>
+to date who have helped make Bokeh such an amazing project, personally, and on behalf
+of the entire <a href="https://github.com/bokeh/bokeh/wiki/BEP-4:-Project-Roles#core-team">Core Team</a>.</p>
+<p>If you are one of these 322 people who have made a PR up until now,
+we have a special "pre 1.0 contributor" laptop sticker just for you, as a small token
+of appreciation. Reach out on <a href="https://gitter.im/bokeh/bokeh">Gitter chat</a> and
+we will figure out how to send it to you!</p>
+<p>As always, anyone interested in helping out should drop by the <a href="https://gitter.im/bokeh/bokeh-dev">Dev Chat Channel</a>!
+and say hello!</p>
+<p>Thanks,</p>
+<p>Bryan Van de Ven</p>
+
+</div>
+      </div>
+    </div>
+  </div>
+
+    
+  
+
+
+    
+    
+    
+    <div class="container">
+      <div class="row">
+        <div class="eight columns">
+        
+        
+        </div>
+      </div>
+    </div>
+  </div>
+
+    </div>
+
+    
+    <div class="bottomsummary">
+      <div class="container">
+      </div>
+    </div>
+    
+
+    
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="four columns icon-bar">
+            <a href="https://github.com/bokeh/bokeh/" title="Bokeh on GitHub"
+              ><i class="fa fa-github"></i></a>
+            <a href="https://github.com/bokeh/bokeh/issues/" title="Report Issues for Bokeh"
+              ><i class="fa fa-bug"></i></a>
+            <a href="https://twitter.com/BokehPlots" title="Find Bokeh on Twitter"
+              ><i class="fa fa-twitter"></i></a>
+            <a href="https://gitter.im/bokeh/bokeh" title="Chat on Gitter"
+              ><i class="fa fa-comment"></i></a>
+            <a href="https://github.com/bokeh/bokeh.github.io/tree/source/content/blog/release-1-0-0/contents.lr" title="View source for this page"><i class="fa fa-code"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+
+<!-- JS
+================================================== -->
+<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-27761864-7', 'pydata.org');
+  ga('user.set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+</script>
+
+</body>
