@@ -151,8 +151,9 @@ make a great self-contained project for a new contributor!)</p>
 <p>Another old issue <a href="https://github.com/bokeh/bokeh/issues/5884"><code>#5884</code> - Let Scatter marker type be parameterizable</a>
 made it into the 1.0 release. Now the <code>scatter</code> method of figures creates a new <code>Scatter</code>
 glyph, which can specify the marker type of each data point individually:</p>
-<pre><code>plot.scatter(x=[1,2,3], y-[4,5,6], marker=['circle', 'hex', 'square'])
-</code></pre>
+<div class="highlight"><pre><span></span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="n">y</span><span class="o">-</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;circle&#39;</span><span class="p">,</span> <span class="s1">&#39;hex&#39;</span><span class="p">,</span> <span class="s1">&#39;square&#39;</span><span class="p">])</span>
+</pre></div>
+<p>This capability is especially useful together with a new <code>factor_marker</code></p>
 <div class="highlight"><pre><span></span><span class="n">SPECIES</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;setosa&#39;</span><span class="p">,</span> <span class="s1">&#39;versicolor&#39;</span><span class="p">,</span> <span class="s1">&#39;virginica&#39;</span><span class="p">]</span>
 <span class="n">MARKERS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;circle&#39;</span><span class="p">,</span> <span class="s1">&#39;diamond&#39;</span><span class="p">,</span> <span class="s1">&#39;triangle&#39;</span><span class="p">]</span>
 
@@ -164,7 +165,7 @@ glyph, which can specify the marker type of each data point individually:</p>
           <span class="n">color</span><span class="o">=</span><span class="n">factor_cmap</span><span class="p">(</span><span class="s1">&#39;species&#39;</span><span class="p">,</span> <span class="s1">&#39;Category10_3&#39;</span><span class="p">,</span> <span class="n">SPECIES</span><span class="p">))</span>
 </pre></div>
 <div class="image"><center><img src="markers.png" width="60%"></center></div><h4>JSON Export and Embed</h4>
-<p>Bokeh 1.0 adds a new</p>
+<p>Bokeh 1.0 adds a new function to <code>bokeh.embed</code>:</p>
 <div class="highlight"><pre><span></span><span class="n">json_item</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
 </pre></div>
 <p>This function can be called on any Bokeh object, e.g plots or layouts, and the
@@ -239,6 +240,22 @@ behaviors:</p>
 help us to ensure much better stability in 1.x releases. Still, they are only
 the beginning, with the new infrastructure it is easier than ever to add these
 kinds of tests, and we plan to do just that!</p>
+<h4>Examples Refresh</h4>
+<p>Leading up to this release we also tried to make a pass over all the examoples in
+the documentation. There are several hundred examples available now, and many
+could use some gentle attention.</p>
+<p>Additionally, some new examples were added in places. One worth mentioning in particular
+is the face dectection demo written by Luke Canavan. Here it is, identifying me (but not our dog):</p>
+<div class="image"><center><img src="faces.gif" width="70%"></center></div><p>This is a nice example because it ties together several great Bokeh features, all
+in under 80 lines of Python code.</p>
+<ul>
+<li>Demonstrates data updates and streaming API</li>
+<li>Connects web visualization to PyData tools (OpenCV)</li>
+<li>Uses custom template for nice look and responsive layout</li>
+</ul>
+<p>This example is located at in the GitHub repository under <a href="https://github.com/bokeh/bokeh/tree/1.0.0/examples/app/faces"><em>examples/app/faces</em></a>.
+To run it, you will need OpenCV and the latest <a href="https://bokeh.pydata.org/en/latest/docs/installation.html#sample-data">Bokeh sample data</a>
+installed.</p>
 <hr>
 <h5>Gracias धन्यवाद  Cпасибо 谢谢 Obrigado شكرا Danke ありがとう Merci</h5>
 <p>I'd like to thank the <a href="https://github.com/bokeh/bokeh/graphs/contributors">322 GitHub contributors</a>
