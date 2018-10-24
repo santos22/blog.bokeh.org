@@ -74,7 +74,7 @@
 <p>Overall Bokeh highlights are:</p>
 <p><small>
 <em>
-Powerful Bokeh server &mdash; <a href="https://shiny.rstudio.com">"Shiny For Python"</a></p>
+Powerful Bokeh Server &mdash; <a href="https://shiny.rstudio.com">"Shiny For Python"</a></p>
 <p>&nbsp; - Affords Python and Javascript callbacks for data updates and UI events</p>
 <p>&nbsp; - Connect PyData tools to web dashboards with plot tools and HTML widgets</p>
 <p>&nbsp; - Uses an efficient protocol for streaming and array data</p>
@@ -109,6 +109,29 @@ by executing the command <code>conda install -c bokeh bokeh</code> . Otherwise, 
 <code>pip install bokeh</code>.</p>
 <hr>
 <h4>What 1.0 Means</h4>
+<p>First off, what "1.0" does <em>not</em> mean: It does not mean that all the work is done,
+or that all bugs are squashed.
+For instance, there are still a fair number of known issues with the built in
+layout system. A large <a href="https://github.com/bokeh/bokeh/pull/8085">Work In Progress PR</a>
+will fix many of these issues in a future 1.1 release. Additionally, you can see
+larger "roadmap" items still TBD in the new
+<a href="https://bokeh.pydata.org/en/latest/docs/vision.html">Vision and Work</a> section
+of the docs.</p>
+<p>But these things willbe done in a way compatible with current APIs. After a period of
+youthful "0.x" experimentation, the
+<a href="https://github.com/bokeh/bokeh/wiki/BEP-4:-Project-Roles#core-team">Core Team</a>
+asserts that existing public APIs will now be defended. From now on, any
+intentional breaking changes will precipitate a major version bump.
+Of course we will strive to avoid any <em>unintentional</em> changes as well&mdash;see the section
+below on improved testing. This commitment is the major purpose of releasing "1.0" now.</p>
+<p>This milestone also represents further progress in making Bokeh
+a truly independent project in the context of a wider OSS community.
+However, to secure long-term success, the Bokeh project must diversify both its
+contributor base and its funding sources. So if you or your organization find Bokeh
+valuable, please consider making a concrete contribution towards further development
+and ongoing maintenance of Bokeh.
+This could be by <a href="https://www.flipcause.com/secure/cause_pdetails/MzE5NjE=">making a financial donation through NumFOCUS</a>
+or by <a href="../../../../../blog/2018/10/22/release-1-0-0/[Dev Chat Channel](https:/gitter.im/bokeh/bokeh-dev">getting involved with development</a>).</p>
 <hr>
 <h4>Patches With Holes</h4>
 <p>Thanks to the efforts of Julia Signell, old issue <a href="https://github.com/bokeh/bokeh/issues/2321"><code>#2321</code> - Patches with Holes</a>
