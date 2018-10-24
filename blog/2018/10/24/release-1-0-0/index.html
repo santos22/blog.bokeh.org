@@ -137,7 +137,7 @@ or by <a href="../../../../../blog/2018/10/24/release-1-0-0/[Dev Chat Channel](h
 <p>Thanks to the efforts of Julia Signell, old issue <a href="https://github.com/bokeh/bokeh/issues/2321"><code>#2321</code> - Patches with Holes</a>
 has been completed. The approach taken was to add a new glyph type <code>MultiPolygons</code>
 that is inspired heavily by GeoJSON format of sub-polygons that specify an
-"exterior" run followed by any optional "holes" inside the exterior ring.
+"exterior ring" followed by optional "holes" inside the exterior ring.
 Using this glyph from the <code>bokeh.plotting</code> API looks like:</p>
 <div class="highlight"><pre><span></span><span class="n">p</span><span class="o">.</span><span class="n">multi_polygons</span><span class="p">(</span>
     <span class="n">xs</span><span class="o">=</span><span class="p">[</span>
