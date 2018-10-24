@@ -232,7 +232,7 @@ function from JavaScript: <code>Bokeh.embed.embed_item(item, "myplot")</code>
 The first paramter is the JSON output and the second parameter is the <code>id</code> of
 the div to embed the content into. (It's also possible to specify the id on the
 Python side instead if that is preferable.)</p>
-<p>As a concrete example, if you have a Flask applications that serves Bokeh
+<p>As a concrete example, if you have a Flask application that serves Bokeh
 JSON at an endpoint <code>/plot</code> like this:</p>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bokeh.embed</span> <span class="kn">import</span> <span class="n">json_item</span>
 
@@ -253,8 +253,8 @@ JSON at an endpoint <code>/plot</code> like this:</p>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 </pre></div>
 <h4>Testing, Testing...</h4>
-<p>Thanks to a few Pull Requests from revent new contributor <a href="https://github.com/xavArtley">xavArtley</a>,
-Bokeh unit test now run continously on Windows for the first time ever:</p>
+<p>Thanks to a few Pull Requests from recent new contributor <a href="https://github.com/xavArtley">xavArtley</a>,
+Bokeh unit tests now run continously on Windows for the first time ever:</p>
 <div class="image"><center><img src="appveyor.png" width="70%"></center></div><p>Another development concerns rigorous UI testing.
 Sometime in 2017 our previous Selenium integration testing infrastructure fell into
 disrepair. As a result unfortunate regressions and bugs started to slip past
