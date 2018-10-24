@@ -174,9 +174,9 @@ filled contours plots simpler. (This would also
 make a great self-contained project for an interested new contributor!)</p>
 <h4>A New Scatter</h4>
 <p>Another old issue <a href="https://github.com/bokeh/bokeh/issues/5884"><code>#5884</code> - Let Scatter marker type be parameterizable</a>
-made it into the 1.0 release. Now the <code>scatter</code> method of figures creates a new <code>Scatter</code>
-glyph, which can specify the marker type of each data point individually:</p>
-<div class="highlight"><pre><span></span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="n">y</span><span class="o">-</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;circle&#39;</span><span class="p">,</span> <span class="s1">&#39;hex&#39;</span><span class="p">,</span> <span class="s1">&#39;square&#39;</span><span class="p">])</span>
+made it into the 1.0 release. Now the <code>scatter</code> glyph method creates a new <code>Scatter</code>
+object, that can specify the marker type of each data point individually:</p>
+<div class="highlight"><pre><span></span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;circle&#39;</span><span class="p">,</span> <span class="s1">&#39;hex&#39;</span><span class="p">,</span> <span class="s1">&#39;square&#39;</span><span class="p">])</span>
 </pre></div>
 <p>This capability is especially useful together with a new <code>factor_marker</code> transform
 that can map categorical values to marker types:</p>
