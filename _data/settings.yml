@@ -11,12 +11,12 @@ menu_settings:
   menu_items:
     - title: 'Latest'
       url: '/'
-    - title: 'Projects'
-      url: '/projects/'
-    - title: 'About'
-      url: '/about'
-    - title: 'Contact'
-      url: '/contact'
+    # - title: 'Projects'
+    #   url: '/projects/'
+    # - title: 'About'
+    #   url: '/about'
+    # - title: 'Contact'
+    #   url: '/contact'
 
 grid_settings:
   grid_spacing: 10
