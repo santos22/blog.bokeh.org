@@ -17,7 +17,7 @@ excerpt: tl;dr I'm impressed. Chartify offers a clean API to ingest tidy data an
 
 tl;dr I'm impressed. Chartify offers a clean API to ingest tidy data and generate a variety of visually pleasing charts, while also exposing the underlying Bokeh figure for further customization. I'm excited about this addition to the Python data visualization ecosystem.
 
-![Horizontal Histogram](/images/chartify_review/chartify_histogram.png)
+![Horizontal Histogram](/images/chartify_review/chartify_histogram.png){:width="80%"}
 
 (taken from the [Chartify Examples Notebook](https://github.com/spotify/chartify/blob/master/examples/Examples.ipynb))
 
@@ -260,7 +260,7 @@ hover = HoverTool(tooltips=[
 
 ### access Bokeh.Figure object
 ch.figure.add_tools(hover)
-ch.figure.sizing_mode = 'scale_width
+ch.figure.sizing_mode = 'scale_width'
 
 ch.show()
 ```
