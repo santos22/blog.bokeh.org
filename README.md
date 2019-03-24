@@ -17,5 +17,5 @@ One time:
 
 Every time:
 
-1) `bundle exec jekyll serve`
+1) `bundle exec jekyll serve --future`
 2) Edit site
