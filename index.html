@@ -10,7 +10,7 @@ featured_image: /images/demo/demo-portrait.jpg
 	<div class="wrap">
 
 		{% for post in paginator.posts %}
-
+		{% unless post.draft %}
 		<article class="blog-post">
 
 			<div class="blog-post__header">
@@ -28,7 +28,7 @@ featured_image: /images/demo/demo-portrait.jpg
 			</div>
 
 		</article>
-
+		{% endunless %}
 		{% endfor %}
 
 	</div>

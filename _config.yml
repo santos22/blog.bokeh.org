@@ -1,5 +1,7 @@
 site: Bokeh Journal
 
+future: true
+
 collections:
   pages:
     output: true
