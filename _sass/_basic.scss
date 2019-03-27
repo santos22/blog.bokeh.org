@@ -372,6 +372,10 @@ body.loading {
 	}
 }
 
+page:after {
+	content: "";
+	display: block;
+  }
 
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Page sections
