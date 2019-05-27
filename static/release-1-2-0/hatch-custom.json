@@ -1,0 +1,1941 @@
+{
+  "target_id": null,
+  "root_id": "7165",
+  "doc": {
+    "roots": {
+      "references": [
+        {
+          "attributes": {
+            "below": [
+              {
+                "id": "7174",
+                "type": "LinearAxis"
+              }
+            ],
+            "center": [
+              {
+                "id": "7178",
+                "type": "Grid"
+              },
+              {
+                "id": "7183",
+                "type": "Grid"
+              }
+            ],
+            "left": [
+              {
+                "id": "7179",
+                "type": "LinearAxis"
+              }
+            ],
+            "plot_height": 350,
+            "renderers": [
+              {
+                "id": "7189",
+                "type": "GlyphRenderer"
+              },
+              {
+                "id": "7195",
+                "type": "GlyphRenderer"
+              },
+              {
+                "id": "7201",
+                "type": "GlyphRenderer"
+              },
+              {
+                "id": "7207",
+                "type": "GlyphRenderer"
+              },
+              {
+                "id": "7213",
+                "type": "GlyphRenderer"
+              },
+              {
+                "id": "7219",
+                "type": "GlyphRenderer"
+              },
+              {
+                "id": "7225",
+                "type": "GlyphRenderer"
+              },
+              {
+                "id": "7231",
+                "type": "GlyphRenderer"
+              },
+              {
+                "id": "7237",
+                "type": "GlyphRenderer"
+              },
+              {
+                "id": "7243",
+                "type": "GlyphRenderer"
+              },
+              {
+                "id": "7249",
+                "type": "GlyphRenderer"
+              },
+              {
+                "id": "7255",
+                "type": "GlyphRenderer"
+              },
+              {
+                "id": "7261",
+                "type": "GlyphRenderer"
+              }
+            ],
+            "sizing_mode": "stretch_width",
+            "title": {
+              "id": "7571",
+              "type": "Title"
+            },
+            "toolbar": {
+              "id": "7184",
+              "type": "Toolbar"
+            },
+            "toolbar_location": null,
+            "x_range": {
+              "id": "7166",
+              "type": "DataRange1d"
+            },
+            "x_scale": {
+              "id": "7170",
+              "type": "LinearScale"
+            },
+            "y_range": {
+              "id": "7168",
+              "type": "DataRange1d"
+            },
+            "y_scale": {
+              "id": "7172",
+              "type": "LinearScale"
+            }
+          },
+          "id": "7165",
+          "subtype": "Figure",
+          "type": "Plot"
+        },
+        {
+          "attributes": {
+            "url": "https://static.bokeh.org/clipart/clipart-colorful-circles-64x64.png"
+          },
+          "id": "7185",
+          "type": "ImageURLTexture"
+        },
+        {
+          "attributes": {
+            "url": "https://static.bokeh.org/clipart/clipart-ferns-64x64.png"
+          },
+          "id": "7203",
+          "type": "ImageURLTexture"
+        },
+        {
+          "attributes": {
+            "fill_color": {
+              "value": null
+            },
+            "hatch_extra": {
+              "image": {
+                "id": "7257",
+                "type": "ImageURLTexture"
+              }
+            },
+            "hatch_pattern": {
+              "value": "image"
+            },
+            "top": {
+              "value": 5
+            },
+            "width": {
+              "value": 0.9
+            },
+            "x": {
+              "value": 12.5
+            }
+          },
+          "id": "7259",
+          "type": "VBar"
+        },
+        {
+          "attributes": {
+            "source": {
+              "id": "7204",
+              "type": "ColumnDataSource"
+            }
+          },
+          "id": "7208",
+          "type": "CDSView"
+        },
+        {
+          "attributes": {
+            "data_source": {
+              "id": "7204",
+              "type": "ColumnDataSource"
+            },
+            "glyph": {
+              "id": "7205",
+              "type": "VBar"
+            },
+            "hover_glyph": null,
+            "muted_glyph": null,
+            "nonselection_glyph": {
+              "id": "7206",
+              "type": "VBar"
+            },
+            "selection_glyph": null,
+            "view": {
+              "id": "7208",
+              "type": "CDSView"
+            }
+          },
+          "id": "7207",
+          "type": "GlyphRenderer"
+        },
+        {
+          "attributes": {
+            "url": "https://static.bokeh.org/clipart/clipart-beads-64x64.png"
+          },
+          "id": "7257",
+          "type": "ImageURLTexture"
+        },
+        {
+          "attributes": {
+            "data_source": {
+              "id": "7252",
+              "type": "ColumnDataSource"
+            },
+            "glyph": {
+              "id": "7253",
+              "type": "VBar"
+            },
+            "hover_glyph": null,
+            "muted_glyph": null,
+            "nonselection_glyph": {
+              "id": "7254",
+              "type": "VBar"
+            },
+            "selection_glyph": null,
+            "view": {
+              "id": "7256",
+              "type": "CDSView"
+            }
+          },
+          "id": "7255",
+          "type": "GlyphRenderer"
+        },
+        {
+          "attributes": {
+            "callback": null,
+            "data": {},
+            "selected": {
+              "id": "7583",
+              "type": "Selection"
+            },
+            "selection_policy": {
+              "id": "7584",
+              "type": "UnionRenderers"
+            }
+          },
+          "id": "7204",
+          "type": "ColumnDataSource"
+        },
+        {
+          "attributes": {},
+          "id": "7172",
+          "type": "LinearScale"
+        },
+        {
+          "attributes": {
+            "source": {
+              "id": "7252",
+              "type": "ColumnDataSource"
+            }
+          },
+          "id": "7256",
+          "type": "CDSView"
+        },
+        {
+          "attributes": {
+            "fill_color": {
+              "value": null
+            },
+            "hatch_extra": {
+              "image": {
+                "id": "7203",
+                "type": "ImageURLTexture"
+              }
+            },
+            "hatch_pattern": {
+              "value": "image"
+            },
+            "top": {
+              "value": 5
+            },
+            "width": {
+              "value": 0.9
+            },
+            "x": {
+              "value": 3.5
+            }
+          },
+          "id": "7205",
+          "type": "VBar"
+        },
+        {
+          "attributes": {
+            "callback": null,
+            "range_padding": 0
+          },
+          "id": "7168",
+          "type": "DataRange1d"
+        },
+        {
+          "attributes": {},
+          "id": "7170",
+          "type": "LinearScale"
+        },
+        {
+          "attributes": {
+            "fill_alpha": {
+              "value": 0.1
+            },
+            "fill_color": {
+              "value": "#1f77b4"
+            },
+            "hatch_extra": {
+              "image": {
+                "id": "7203",
+                "type": "ImageURLTexture"
+              }
+            },
+            "hatch_pattern": {
+              "value": "image"
+            },
+            "line_alpha": {
+              "value": 0.1
+            },
+            "line_color": {
+              "value": "#1f77b4"
+            },
+            "top": {
+              "value": 5
+            },
+            "width": {
+              "value": 0.9
+            },
+            "x": {
+              "value": 3.5
+            }
+          },
+          "id": "7206",
+          "type": "VBar"
+        },
+        {
+          "attributes": {
+            "callback": null,
+            "data": {},
+            "selected": {
+              "id": "7601",
+              "type": "Selection"
+            },
+            "selection_policy": {
+              "id": "7602",
+              "type": "UnionRenderers"
+            }
+          },
+          "id": "7258",
+          "type": "ColumnDataSource"
+        },
+        {
+          "attributes": {
+            "callback": null,
+            "range_padding": 0
+          },
+          "id": "7166",
+          "type": "DataRange1d"
+        },
+        {
+          "attributes": {
+            "url": "https://static.bokeh.org/clipart/clipart-gold-stars-64x64.png"
+          },
+          "id": "7233",
+          "type": "ImageURLTexture"
+        },
+        {
+          "attributes": {},
+          "id": "7175",
+          "type": "BasicTicker"
+        },
+        {
+          "attributes": {
+            "fill_alpha": {
+              "value": 0.1
+            },
+            "fill_color": {
+              "value": "#1f77b4"
+            },
+            "hatch_extra": {
+              "image": {
+                "id": "7251",
+                "type": "ImageURLTexture"
+              }
+            },
+            "hatch_pattern": {
+              "value": "image"
+            },
+            "line_alpha": {
+              "value": 0.1
+            },
+            "line_color": {
+              "value": "#1f77b4"
+            },
+            "top": {
+              "value": 5
+            },
+            "width": {
+              "value": 0.9
+            },
+            "x": {
+              "value": 11.5
+            }
+          },
+          "id": "7254",
+          "type": "VBar"
+        },
+        {
+          "attributes": {
+            "url": "https://static.bokeh.org/clipart/clipart-diamond-tiles-64x64.png"
+          },
+          "id": "7209",
+          "type": "ImageURLTexture"
+        },
+        {
+          "attributes": {
+            "url": "https://static.bokeh.org/clipart/clipart-wallpaper-circles-64x64.png"
+          },
+          "id": "7251",
+          "type": "ImageURLTexture"
+        },
+        {
+          "attributes": {
+            "fill_color": {
+              "value": null
+            },
+            "hatch_extra": {
+              "image": {
+                "id": "7209",
+                "type": "ImageURLTexture"
+              }
+            },
+            "hatch_pattern": {
+              "value": "image"
+            },
+            "top": {
+              "value": 5
+            },
+            "width": {
+              "value": 0.9
+            },
+            "x": {
+              "value": 4.5
+            }
+          },
+          "id": "7211",
+          "type": "VBar"
+        },
+        {
+          "attributes": {
+            "callback": null,
+            "data": {},
+            "selected": {
+              "id": "7599",
+              "type": "Selection"
+            },
+            "selection_policy": {
+              "id": "7600",
+              "type": "UnionRenderers"
+            }
+          },
+          "id": "7252",
+          "type": "ColumnDataSource"
+        },
+        {
+          "attributes": {},
+          "id": "7180",
+          "type": "BasicTicker"
+        },
+        {
+          "attributes": {
+            "data_source": {
+              "id": "7246",
+              "type": "ColumnDataSource"
+            },
+            "glyph": {
+              "id": "7247",
+              "type": "VBar"
+            },
+            "hover_glyph": null,
+            "muted_glyph": null,
+            "nonselection_glyph": {
+              "id": "7248",
+              "type": "VBar"
+            },
+            "selection_glyph": null,
+            "view": {
+              "id": "7250",
+              "type": "CDSView"
+            }
+          },
+          "id": "7249",
+          "type": "GlyphRenderer"
+        },
+        {
+          "attributes": {
+            "source": {
+              "id": "7186",
+              "type": "ColumnDataSource"
+            }
+          },
+          "id": "7190",
+          "type": "CDSView"
+        },
+        {
+          "attributes": {
+            "callback": null,
+            "data": {},
+            "selected": {
+              "id": "7585",
+              "type": "Selection"
+            },
+            "selection_policy": {
+              "id": "7586",
+              "type": "UnionRenderers"
+            }
+          },
+          "id": "7210",
+          "type": "ColumnDataSource"
+        },
+        {
+          "attributes": {
+            "url": "https://static.bokeh.org/clipart/clipart-celtic-repeating-64x64.png"
+          },
+          "id": "7191",
+          "type": "ImageURLTexture"
+        },
+        {
+          "attributes": {
+            "formatter": {
+              "id": "7574",
+              "type": "BasicTickFormatter"
+            },
+            "ticker": {
+              "id": "7180",
+              "type": "BasicTicker"
+            }
+          },
+          "id": "7179",
+          "type": "LinearAxis"
+        },
+        {
+          "attributes": {
+            "source": {
+              "id": "7246",
+              "type": "ColumnDataSource"
+            }
+          },
+          "id": "7250",
+          "type": "CDSView"
+        },
+        {
+          "attributes": {
+            "ticker": {
+              "id": "7175",
+              "type": "BasicTicker"
+            }
+          },
+          "id": "7178",
+          "type": "Grid"
+        },
+        {
+          "attributes": {
+            "fill_alpha": {
+              "value": 0.1
+            },
+            "fill_color": {
+              "value": "#1f77b4"
+            },
+            "hatch_extra": {
+              "image": {
+                "id": "7209",
+                "type": "ImageURLTexture"
+              }
+            },
+            "hatch_pattern": {
+              "value": "image"
+            },
+            "line_alpha": {
+              "value": 0.1
+            },
+            "line_color": {
+              "value": "#1f77b4"
+            },
+            "top": {
+              "value": 5
+            },
+            "width": {
+              "value": 0.9
+            },
+            "x": {
+              "value": 4.5
+            }
+          },
+          "id": "7212",
+          "type": "VBar"
+        },
+        {
+          "attributes": {
+            "formatter": {
+              "id": "7576",
+              "type": "BasicTickFormatter"
+            },
+            "ticker": {
+              "id": "7175",
+              "type": "BasicTicker"
+            }
+          },
+          "id": "7174",
+          "type": "LinearAxis"
+        },
+        {
+          "attributes": {
+            "fill_color": {
+              "value": null
+            },
+            "hatch_extra": {
+              "image": {
+                "id": "7251",
+                "type": "ImageURLTexture"
+              }
+            },
+            "hatch_pattern": {
+              "value": "image"
+            },
+            "top": {
+              "value": 5
+            },
+            "width": {
+              "value": 0.9
+            },
+            "x": {
+              "value": 11.5
+            }
+          },
+          "id": "7253",
+          "type": "VBar"
+        },
+        {
+          "attributes": {
+            "active_drag": "auto",
+            "active_inspect": "auto",
+            "active_multi": null,
+            "active_scroll": "auto",
+            "active_tap": "auto"
+          },
+          "id": "7184",
+          "type": "Toolbar"
+        },
+        {
+          "attributes": {
+            "data_source": {
+              "id": "7210",
+              "type": "ColumnDataSource"
+            },
+            "glyph": {
+              "id": "7211",
+              "type": "VBar"
+            },
+            "hover_glyph": null,
+            "muted_glyph": null,
+            "nonselection_glyph": {
+              "id": "7212",
+              "type": "VBar"
+            },
+            "selection_glyph": null,
+            "view": {
+              "id": "7214",
+              "type": "CDSView"
+            }
+          },
+          "id": "7213",
+          "type": "GlyphRenderer"
+        },
+        {
+          "attributes": {
+            "fill_color": {
+              "value": null
+            },
+            "hatch_extra": {
+              "image": {
+                "id": "7245",
+                "type": "ImageURLTexture"
+              }
+            },
+            "hatch_pattern": {
+              "value": "image"
+            },
+            "top": {
+              "value": 5
+            },
+            "width": {
+              "value": 0.9
+            },
+            "x": {
+              "value": 10.5
+            }
+          },
+          "id": "7247",
+          "type": "VBar"
+        },
+        {
+          "attributes": {
+            "dimension": 1,
+            "ticker": {
+              "id": "7180",
+              "type": "BasicTicker"
+            }
+          },
+          "id": "7183",
+          "type": "Grid"
+        },
+        {
+          "attributes": {
+            "source": {
+              "id": "7210",
+              "type": "ColumnDataSource"
+            }
+          },
+          "id": "7214",
+          "type": "CDSView"
+        },
+        {
+          "attributes": {
+            "fill_alpha": {
+              "value": 0.1
+            },
+            "fill_color": {
+              "value": "#1f77b4"
+            },
+            "hatch_extra": {
+              "image": {
+                "id": "7245",
+                "type": "ImageURLTexture"
+              }
+            },
+            "hatch_pattern": {
+              "value": "image"
+            },
+            "line_alpha": {
+              "value": 0.1
+            },
+            "line_color": {
+              "value": "#1f77b4"
+            },
+            "top": {
+              "value": 5
+            },
+            "width": {
+              "value": 0.9
+            },
+            "x": {
+              "value": 10.5
+            }
+          },
+          "id": "7248",
+          "type": "VBar"
+        },
+        {
+          "attributes": {
+            "data_source": {
+              "id": "7192",
+              "type": "ColumnDataSource"
+            },
+            "glyph": {
+              "id": "7193",
+              "type": "VBar"
+            },
+            "hover_glyph": null,
+            "muted_glyph": null,
+            "nonselection_glyph": {
+              "id": "7194",
+              "type": "VBar"
+            },
+            "selection_glyph": null,
+            "view": {
+              "id": "7196",
+              "type": "CDSView"
+            }
+          },
+          "id": "7195",
+          "type": "GlyphRenderer"
+        },
+        {
+          "attributes": {
+            "url": "https://static.bokeh.org/clipart/clipart-abstract-squares-64x64.png"
+          },
+          "id": "7215",
+          "type": "ImageURLTexture"
+        },
+        {
+          "attributes": {
+            "callback": null,
+            "data": {},
+            "selected": {
+              "id": "7577",
+              "type": "Selection"
+            },
+            "selection_policy": {
+              "id": "7578",
+              "type": "UnionRenderers"
+            }
+          },
+          "id": "7186",
+          "type": "ColumnDataSource"
+        },
+        {
+          "attributes": {
+            "callback": null,
+            "data": {},
+            "selected": {
+              "id": "7587",
+              "type": "Selection"
+            },
+            "selection_policy": {
+              "id": "7588",
+              "type": "UnionRenderers"
+            }
+          },
+          "id": "7216",
+          "type": "ColumnDataSource"
+        },
+        {
+          "attributes": {
+            "fill_color": {
+              "value": null
+            },
+            "hatch_extra": {
+              "image": {
+                "id": "7191",
+                "type": "ImageURLTexture"
+              }
+            },
+            "hatch_pattern": {
+              "value": "image"
+            },
+            "top": {
+              "value": 5
+            },
+            "width": {
+              "value": 0.9
+            },
+            "x": {
+              "value": 1.5
+            }
+          },
+          "id": "7193",
+          "type": "VBar"
+        },
+        {
+          "attributes": {
+            "fill_color": {
+              "value": null
+            },
+            "hatch_extra": {
+              "image": {
+                "id": "7215",
+                "type": "ImageURLTexture"
+              }
+            },
+            "hatch_pattern": {
+              "value": "image"
+            },
+            "top": {
+              "value": 5
+            },
+            "width": {
+              "value": 0.9
+            },
+            "x": {
+              "value": 5.5
+            }
+          },
+          "id": "7217",
+          "type": "VBar"
+        },
+        {
+          "attributes": {
+            "fill_alpha": {
+              "value": 0.1
+            },
+            "fill_color": {
+              "value": "#1f77b4"
+            },
+            "hatch_extra": {
+              "image": {
+                "id": "7215",
+                "type": "ImageURLTexture"
+              }
+            },
+            "hatch_pattern": {
+              "value": "image"
+            },
+            "line_alpha": {
+              "value": 0.1
+            },
+            "line_color": {
+              "value": "#1f77b4"
+            },
+            "top": {
+              "value": 5
+            },
+            "width": {
+              "value": 0.9
+            },
+            "x": {
+              "value": 5.5
+            }
+          },
+          "id": "7218",
+          "type": "VBar"
+        },
+        {
+          "attributes": {
+            "source": {
+              "id": "7192",
+              "type": "ColumnDataSource"
+            }
+          },
+          "id": "7196",
+          "type": "CDSView"
+        },
+        {
+          "attributes": {
+            "callback": null,
+            "data": {},
+            "selected": {
+              "id": "7579",
+              "type": "Selection"
+            },
+            "selection_policy": {
+              "id": "7580",
+              "type": "UnionRenderers"
+            }
+          },
+          "id": "7192",
+          "type": "ColumnDataSource"
+        },
+        {
+          "attributes": {
+            "data_source": {
+              "id": "7216",
+              "type": "ColumnDataSource"
+            },
+            "glyph": {
+              "id": "7217",
+              "type": "VBar"
+            },
+            "hover_glyph": null,
+            "muted_glyph": null,
+            "nonselection_glyph": {
+              "id": "7218",
+              "type": "VBar"
+            },
+            "selection_glyph": null,
+            "view": {
+              "id": "7220",
+              "type": "CDSView"
+            }
+          },
+          "id": "7219",
+          "type": "GlyphRenderer"
+        },
+        {
+          "attributes": {
+            "source": {
+              "id": "7216",
+              "type": "ColumnDataSource"
+            }
+          },
+          "id": "7220",
+          "type": "CDSView"
+        },
+        {
+          "attributes": {},
+          "id": "7574",
+          "type": "BasicTickFormatter"
+        },
+        {
+          "attributes": {
+            "url": "https://static.bokeh.org/clipart/clipart-interlaced-pattern-64x64.png"
+          },
+          "id": "7221",
+          "type": "ImageURLTexture"
+        },
+        {
+          "attributes": {
+            "fill_color": {
+              "value": null
+            },
+            "hatch_extra": {
+              "image": {
+                "id": "7197",
+                "type": "ImageURLTexture"
+              }
+            },
+            "hatch_pattern": {
+              "value": "image"
+            },
+            "top": {
+              "value": 5
+            },
+            "width": {
+              "value": 0.9
+            },
+            "x": {
+              "value": 2.5
+            }
+          },
+          "id": "7199",
+          "type": "VBar"
+        },
+        {
+          "attributes": {
+            "callback": null,
+            "data": {},
+            "selected": {
+              "id": "7589",
+              "type": "Selection"
+            },
+            "selection_policy": {
+              "id": "7590",
+              "type": "UnionRenderers"
+            }
+          },
+          "id": "7222",
+          "type": "ColumnDataSource"
+        },
+        {
+          "attributes": {
+            "callback": null,
+            "data": {},
+            "selected": {
+              "id": "7581",
+              "type": "Selection"
+            },
+            "selection_policy": {
+              "id": "7582",
+              "type": "UnionRenderers"
+            }
+          },
+          "id": "7198",
+          "type": "ColumnDataSource"
+        },
+        {
+          "attributes": {
+            "fill_color": {
+              "value": null
+            },
+            "hatch_extra": {
+              "image": {
+                "id": "7221",
+                "type": "ImageURLTexture"
+              }
+            },
+            "hatch_pattern": {
+              "value": "image"
+            },
+            "top": {
+              "value": 5
+            },
+            "width": {
+              "value": 0.9
+            },
+            "x": {
+              "value": 6.5
+            }
+          },
+          "id": "7223",
+          "type": "VBar"
+        },
+        {
+          "attributes": {
+            "url": "https://static.bokeh.org/clipart/clipart-tie-dye-64x64.png"
+          },
+          "id": "7197",
+          "type": "ImageURLTexture"
+        },
+        {
+          "attributes": {
+            "fill_alpha": {
+              "value": 0.1
+            },
+            "fill_color": {
+              "value": "#1f77b4"
+            },
+            "hatch_extra": {
+              "image": {
+                "id": "7221",
+                "type": "ImageURLTexture"
+              }
+            },
+            "hatch_pattern": {
+              "value": "image"
+            },
+            "line_alpha": {
+              "value": 0.1
+            },
+            "line_color": {
+              "value": "#1f77b4"
+            },
+            "top": {
+              "value": 5
+            },
+            "width": {
+              "value": 0.9
+            },
+            "x": {
+              "value": 6.5
+            }
+          },
+          "id": "7224",
+          "type": "VBar"
+        },
+        {
+          "attributes": {
+            "fill_alpha": {
+              "value": 0.1
+            },
+            "fill_color": {
+              "value": "#1f77b4"
+            },
+            "hatch_extra": {
+              "image": {
+                "id": "7191",
+                "type": "ImageURLTexture"
+              }
+            },
+            "hatch_pattern": {
+              "value": "image"
+            },
+            "line_alpha": {
+              "value": 0.1
+            },
+            "line_color": {
+              "value": "#1f77b4"
+            },
+            "top": {
+              "value": 5
+            },
+            "width": {
+              "value": 0.9
+            },
+            "x": {
+              "value": 1.5
+            }
+          },
+          "id": "7194",
+          "type": "VBar"
+        },
+        {
+          "attributes": {
+            "callback": null,
+            "data": {},
+            "selected": {
+              "id": "7591",
+              "type": "Selection"
+            },
+            "selection_policy": {
+              "id": "7592",
+              "type": "UnionRenderers"
+            }
+          },
+          "id": "7228",
+          "type": "ColumnDataSource"
+        },
+        {
+          "attributes": {
+            "data_source": {
+              "id": "7222",
+              "type": "ColumnDataSource"
+            },
+            "glyph": {
+              "id": "7223",
+              "type": "VBar"
+            },
+            "hover_glyph": null,
+            "muted_glyph": null,
+            "nonselection_glyph": {
+              "id": "7224",
+              "type": "VBar"
+            },
+            "selection_glyph": null,
+            "view": {
+              "id": "7226",
+              "type": "CDSView"
+            }
+          },
+          "id": "7225",
+          "type": "GlyphRenderer"
+        },
+        {
+          "attributes": {
+            "fill_alpha": {
+              "value": 0.1
+            },
+            "fill_color": {
+              "value": "#1f77b4"
+            },
+            "hatch_extra": {
+              "image": {
+                "id": "7197",
+                "type": "ImageURLTexture"
+              }
+            },
+            "hatch_pattern": {
+              "value": "image"
+            },
+            "line_alpha": {
+              "value": 0.1
+            },
+            "line_color": {
+              "value": "#1f77b4"
+            },
+            "top": {
+              "value": 5
+            },
+            "width": {
+              "value": 0.9
+            },
+            "x": {
+              "value": 2.5
+            }
+          },
+          "id": "7200",
+          "type": "VBar"
+        },
+        {
+          "attributes": {
+            "source": {
+              "id": "7198",
+              "type": "ColumnDataSource"
+            }
+          },
+          "id": "7202",
+          "type": "CDSView"
+        },
+        {
+          "attributes": {
+            "source": {
+              "id": "7222",
+              "type": "ColumnDataSource"
+            }
+          },
+          "id": "7226",
+          "type": "CDSView"
+        },
+        {
+          "attributes": {
+            "data_source": {
+              "id": "7198",
+              "type": "ColumnDataSource"
+            },
+            "glyph": {
+              "id": "7199",
+              "type": "VBar"
+            },
+            "hover_glyph": null,
+            "muted_glyph": null,
+            "nonselection_glyph": {
+              "id": "7200",
+              "type": "VBar"
+            },
+            "selection_glyph": null,
+            "view": {
+              "id": "7202",
+              "type": "CDSView"
+            }
+          },
+          "id": "7201",
+          "type": "GlyphRenderer"
+        },
+        {
+          "attributes": {
+            "url": "https://static.bokeh.org/clipart/clipart-mosaic-64x64.png"
+          },
+          "id": "7227",
+          "type": "ImageURLTexture"
+        },
+        {
+          "attributes": {
+            "fill_color": {
+              "value": null
+            },
+            "hatch_extra": {
+              "image": {
+                "id": "7227",
+                "type": "ImageURLTexture"
+              }
+            },
+            "hatch_pattern": {
+              "value": "image"
+            },
+            "top": {
+              "value": 5
+            },
+            "width": {
+              "value": 0.9
+            },
+            "x": {
+              "value": 7.5
+            }
+          },
+          "id": "7229",
+          "type": "VBar"
+        },
+        {
+          "attributes": {
+            "source": {
+              "id": "7234",
+              "type": "ColumnDataSource"
+            }
+          },
+          "id": "7238",
+          "type": "CDSView"
+        },
+        {
+          "attributes": {
+            "fill_alpha": {
+              "value": 0.1
+            },
+            "fill_color": {
+              "value": "#1f77b4"
+            },
+            "hatch_extra": {
+              "image": {
+                "id": "7227",
+                "type": "ImageURLTexture"
+              }
+            },
+            "hatch_pattern": {
+              "value": "image"
+            },
+            "line_alpha": {
+              "value": 0.1
+            },
+            "line_color": {
+              "value": "#1f77b4"
+            },
+            "top": {
+              "value": 5
+            },
+            "width": {
+              "value": 0.9
+            },
+            "x": {
+              "value": 7.5
+            }
+          },
+          "id": "7230",
+          "type": "VBar"
+        },
+        {
+          "attributes": {
+            "data_source": {
+              "id": "7228",
+              "type": "ColumnDataSource"
+            },
+            "glyph": {
+              "id": "7229",
+              "type": "VBar"
+            },
+            "hover_glyph": null,
+            "muted_glyph": null,
+            "nonselection_glyph": {
+              "id": "7230",
+              "type": "VBar"
+            },
+            "selection_glyph": null,
+            "view": {
+              "id": "7232",
+              "type": "CDSView"
+            }
+          },
+          "id": "7231",
+          "type": "GlyphRenderer"
+        },
+        {
+          "attributes": {
+            "source": {
+              "id": "7228",
+              "type": "ColumnDataSource"
+            }
+          },
+          "id": "7232",
+          "type": "CDSView"
+        },
+        {
+          "attributes": {
+            "callback": null,
+            "data": {},
+            "selected": {
+              "id": "7593",
+              "type": "Selection"
+            },
+            "selection_policy": {
+              "id": "7594",
+              "type": "UnionRenderers"
+            }
+          },
+          "id": "7234",
+          "type": "ColumnDataSource"
+        },
+        {
+          "attributes": {
+            "data_source": {
+              "id": "7234",
+              "type": "ColumnDataSource"
+            },
+            "glyph": {
+              "id": "7235",
+              "type": "VBar"
+            },
+            "hover_glyph": null,
+            "muted_glyph": null,
+            "nonselection_glyph": {
+              "id": "7236",
+              "type": "VBar"
+            },
+            "selection_glyph": null,
+            "view": {
+              "id": "7238",
+              "type": "CDSView"
+            }
+          },
+          "id": "7237",
+          "type": "GlyphRenderer"
+        },
+        {
+          "attributes": {
+            "fill_color": {
+              "value": null
+            },
+            "hatch_extra": {
+              "image": {
+                "id": "7233",
+                "type": "ImageURLTexture"
+              }
+            },
+            "hatch_pattern": {
+              "value": "image"
+            },
+            "top": {
+              "value": 5
+            },
+            "width": {
+              "value": 0.9
+            },
+            "x": {
+              "value": 8.5
+            }
+          },
+          "id": "7235",
+          "type": "VBar"
+        },
+        {
+          "attributes": {
+            "fill_alpha": {
+              "value": 0.1
+            },
+            "fill_color": {
+              "value": "#1f77b4"
+            },
+            "hatch_extra": {
+              "image": {
+                "id": "7233",
+                "type": "ImageURLTexture"
+              }
+            },
+            "hatch_pattern": {
+              "value": "image"
+            },
+            "line_alpha": {
+              "value": 0.1
+            },
+            "line_color": {
+              "value": "#1f77b4"
+            },
+            "top": {
+              "value": 5
+            },
+            "width": {
+              "value": 0.9
+            },
+            "x": {
+              "value": 8.5
+            }
+          },
+          "id": "7236",
+          "type": "VBar"
+        },
+        {
+          "attributes": {
+            "fill_alpha": {
+              "value": 0.1
+            },
+            "fill_color": {
+              "value": "#1f77b4"
+            },
+            "hatch_extra": {
+              "image": {
+                "id": "7257",
+                "type": "ImageURLTexture"
+              }
+            },
+            "hatch_pattern": {
+              "value": "image"
+            },
+            "line_alpha": {
+              "value": 0.1
+            },
+            "line_color": {
+              "value": "#1f77b4"
+            },
+            "top": {
+              "value": 5
+            },
+            "width": {
+              "value": 0.9
+            },
+            "x": {
+              "value": 12.5
+            }
+          },
+          "id": "7260",
+          "type": "VBar"
+        },
+        {
+          "attributes": {
+            "data_source": {
+              "id": "7258",
+              "type": "ColumnDataSource"
+            },
+            "glyph": {
+              "id": "7259",
+              "type": "VBar"
+            },
+            "hover_glyph": null,
+            "muted_glyph": null,
+            "nonselection_glyph": {
+              "id": "7260",
+              "type": "VBar"
+            },
+            "selection_glyph": null,
+            "view": {
+              "id": "7262",
+              "type": "CDSView"
+            }
+          },
+          "id": "7261",
+          "type": "GlyphRenderer"
+        },
+        {
+          "attributes": {
+            "fill_alpha": {
+              "value": 0.1
+            },
+            "fill_color": {
+              "value": "#1f77b4"
+            },
+            "hatch_extra": {
+              "image": {
+                "id": "7185",
+                "type": "ImageURLTexture"
+              }
+            },
+            "hatch_pattern": {
+              "value": "image"
+            },
+            "line_alpha": {
+              "value": 0.1
+            },
+            "line_color": {
+              "value": "#1f77b4"
+            },
+            "top": {
+              "value": 5
+            },
+            "width": {
+              "value": 0.9
+            },
+            "x": {
+              "value": 0.5
+            }
+          },
+          "id": "7188",
+          "type": "VBar"
+        },
+        {
+          "attributes": {
+            "fill_alpha": {
+              "value": 0.1
+            },
+            "fill_color": {
+              "value": "#1f77b4"
+            },
+            "hatch_extra": {
+              "image": {
+                "id": "7239",
+                "type": "ImageURLTexture"
+              }
+            },
+            "hatch_pattern": {
+              "value": "image"
+            },
+            "line_alpha": {
+              "value": 0.1
+            },
+            "line_color": {
+              "value": "#1f77b4"
+            },
+            "top": {
+              "value": 5
+            },
+            "width": {
+              "value": 0.9
+            },
+            "x": {
+              "value": 9.5
+            }
+          },
+          "id": "7242",
+          "type": "VBar"
+        },
+        {
+          "attributes": {
+            "source": {
+              "id": "7258",
+              "type": "ColumnDataSource"
+            }
+          },
+          "id": "7262",
+          "type": "CDSView"
+        },
+        {
+          "attributes": {},
+          "id": "7576",
+          "type": "BasicTickFormatter"
+        },
+        {
+          "attributes": {},
+          "id": "7577",
+          "type": "Selection"
+        },
+        {
+          "attributes": {
+            "url": "https://static.bokeh.org/clipart/clipart-victorian-background-64x64.png"
+          },
+          "id": "7245",
+          "type": "ImageURLTexture"
+        },
+        {
+          "attributes": {},
+          "id": "7578",
+          "type": "UnionRenderers"
+        },
+        {
+          "attributes": {},
+          "id": "7579",
+          "type": "Selection"
+        },
+        {
+          "attributes": {},
+          "id": "7580",
+          "type": "UnionRenderers"
+        },
+        {
+          "attributes": {
+            "data_source": {
+              "id": "7186",
+              "type": "ColumnDataSource"
+            },
+            "glyph": {
+              "id": "7187",
+              "type": "VBar"
+            },
+            "hover_glyph": null,
+            "muted_glyph": null,
+            "nonselection_glyph": {
+              "id": "7188",
+              "type": "VBar"
+            },
+            "selection_glyph": null,
+            "view": {
+              "id": "7190",
+              "type": "CDSView"
+            }
+          },
+          "id": "7189",
+          "type": "GlyphRenderer"
+        },
+        {
+          "attributes": {},
+          "id": "7581",
+          "type": "Selection"
+        },
+        {
+          "attributes": {},
+          "id": "7582",
+          "type": "UnionRenderers"
+        },
+        {
+          "attributes": {},
+          "id": "7583",
+          "type": "Selection"
+        },
+        {
+          "attributes": {},
+          "id": "7584",
+          "type": "UnionRenderers"
+        },
+        {
+          "attributes": {},
+          "id": "7585",
+          "type": "Selection"
+        },
+        {
+          "attributes": {},
+          "id": "7586",
+          "type": "UnionRenderers"
+        },
+        {
+          "attributes": {
+            "fill_color": {
+              "value": null
+            },
+            "hatch_extra": {
+              "image": {
+                "id": "7185",
+                "type": "ImageURLTexture"
+              }
+            },
+            "hatch_pattern": {
+              "value": "image"
+            },
+            "top": {
+              "value": 5
+            },
+            "width": {
+              "value": 0.9
+            },
+            "x": {
+              "value": 0.5
+            }
+          },
+          "id": "7187",
+          "type": "VBar"
+        },
+        {
+          "attributes": {},
+          "id": "7587",
+          "type": "Selection"
+        },
+        {
+          "attributes": {},
+          "id": "7588",
+          "type": "UnionRenderers"
+        },
+        {
+          "attributes": {},
+          "id": "7589",
+          "type": "Selection"
+        },
+        {
+          "attributes": {},
+          "id": "7590",
+          "type": "UnionRenderers"
+        },
+        {
+          "attributes": {},
+          "id": "7591",
+          "type": "Selection"
+        },
+        {
+          "attributes": {},
+          "id": "7592",
+          "type": "UnionRenderers"
+        },
+        {
+          "attributes": {},
+          "id": "7593",
+          "type": "Selection"
+        },
+        {
+          "attributes": {},
+          "id": "7594",
+          "type": "UnionRenderers"
+        },
+        {
+          "attributes": {},
+          "id": "7595",
+          "type": "Selection"
+        },
+        {
+          "attributes": {},
+          "id": "7596",
+          "type": "UnionRenderers"
+        },
+        {
+          "attributes": {},
+          "id": "7597",
+          "type": "Selection"
+        },
+        {
+          "attributes": {},
+          "id": "7598",
+          "type": "UnionRenderers"
+        },
+        {
+          "attributes": {},
+          "id": "7599",
+          "type": "Selection"
+        },
+        {
+          "attributes": {},
+          "id": "7600",
+          "type": "UnionRenderers"
+        },
+        {
+          "attributes": {
+            "text": ""
+          },
+          "id": "7571",
+          "type": "Title"
+        },
+        {
+          "attributes": {},
+          "id": "7601",
+          "type": "Selection"
+        },
+        {
+          "attributes": {},
+          "id": "7602",
+          "type": "UnionRenderers"
+        },
+        {
+          "attributes": {
+            "source": {
+              "id": "7240",
+              "type": "ColumnDataSource"
+            }
+          },
+          "id": "7244",
+          "type": "CDSView"
+        },
+        {
+          "attributes": {
+            "fill_color": {
+              "value": null
+            },
+            "hatch_extra": {
+              "image": {
+                "id": "7239",
+                "type": "ImageURLTexture"
+              }
+            },
+            "hatch_pattern": {
+              "value": "image"
+            },
+            "top": {
+              "value": 5
+            },
+            "width": {
+              "value": 0.9
+            },
+            "x": {
+              "value": 9.5
+            }
+          },
+          "id": "7241",
+          "type": "VBar"
+        },
+        {
+          "attributes": {
+            "callback": null,
+            "data": {},
+            "selected": {
+              "id": "7595",
+              "type": "Selection"
+            },
+            "selection_policy": {
+              "id": "7596",
+              "type": "UnionRenderers"
+            }
+          },
+          "id": "7240",
+          "type": "ColumnDataSource"
+        },
+        {
+          "attributes": {
+            "callback": null,
+            "data": {},
+            "selected": {
+              "id": "7597",
+              "type": "Selection"
+            },
+            "selection_policy": {
+              "id": "7598",
+              "type": "UnionRenderers"
+            }
+          },
+          "id": "7246",
+          "type": "ColumnDataSource"
+        },
+        {
+          "attributes": {
+            "data_source": {
+              "id": "7240",
+              "type": "ColumnDataSource"
+            },
+            "glyph": {
+              "id": "7241",
+              "type": "VBar"
+            },
+            "hover_glyph": null,
+            "muted_glyph": null,
+            "nonselection_glyph": {
+              "id": "7242",
+              "type": "VBar"
+            },
+            "selection_glyph": null,
+            "view": {
+              "id": "7244",
+              "type": "CDSView"
+            }
+          },
+          "id": "7243",
+          "type": "GlyphRenderer"
+        },
+        {
+          "attributes": {
+            "url": "https://static.bokeh.org/clipart/clipart-voronoi-2d-64x64.png"
+          },
+          "id": "7239",
+          "type": "ImageURLTexture"
+        }
+      ],
+      "root_ids": [
+        "7165"
+      ]
+    },
+    "title": "",
+    "version": "1.2.0rc1"
+  }
+}
