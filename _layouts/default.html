@@ -63,6 +63,14 @@
 	{{ site.data.settings.advanced_settings.header_js }}
 	{% endif %}
 
+	{% if page.bokeh %}
+	<link
+    href="https://cdn.pydata.org/bokeh/release/bokeh-{{page.bokeh}}.min.css"
+    rel="stylesheet" type="text/css">
+
+	<script src="https://cdn.pydata.org/bokeh/release/bokeh-{{page.bokeh}}.min.js"></script>
+	{% endif %}
+
 </head>
 
 
