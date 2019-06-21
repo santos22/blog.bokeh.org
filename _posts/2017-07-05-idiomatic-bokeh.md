@@ -3,7 +3,8 @@ title: 'Enjoying the bokeh.models API'
 date: 2017-07-05
 author: Luke Canavan
 featured_image:
-excerpt: Develop bespoke visualizations using the low-level bokeh.models interface.
+excerpt: >
+  Develop bespoke visualizations using the low-level bokeh.models interface.
 redirect_from:
   - /blog/2017/7/5/idiomatic_bokeh/
 ---

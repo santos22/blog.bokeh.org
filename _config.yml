@@ -3,40 +3,17 @@ site: Bokeh Journal
 future: true
 
 collections:
-  pages:
-    output: true
-    permalink: /:name
   posts:
     output: true
     permalink: /posts/:slug
-  projects:
-    output: true
-    permalink: /project/:slug
 
 defaults:
-  -
-    scope:
-      path: ""
-    values:
-      layout: "default"
-  -
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "page"
   -
     scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
-  -
-    scope:
-      path: ""
-      type: "projects"
-    values:
-      layout: "project"
 
 markdown: kramdown
 

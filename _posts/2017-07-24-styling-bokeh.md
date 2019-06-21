@@ -3,7 +3,8 @@ title: 'Styling Bokeh Visualizations'
 date: 2017-07-24
 author: Luke Canavan
 featured_image:
-excerpt: Strategies for managing Bokeh styling code.
+excerpt: >
+  Strategies for managing Bokeh styling code.
 redirect_from:
   - /blog/2017/7/24/styling-bokeh/
 ---

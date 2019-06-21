@@ -3,7 +3,8 @@ title: 'Creating A Live Dashboard with Bokeh'
 date: 2017-03-13
 author: Josh Usry
 featured_image:
-excerpt: Using Bokeh to create live dashboard.
+excerpt: >
+  Using Bokeh to create live dashboard.
 redirect_from:
   - /blog/2017/3/13/dashboard/
 ---
