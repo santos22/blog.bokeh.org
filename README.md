@@ -1,21 +1,27 @@
 # Bokeh Project Blog
 
-Site for making release announcements, and publishing case studies, howtos, or other project news.
+This is the GitHub repository for the Bokeh Project Blog, [blog.bokeh.org](https://blog.bokeh.org). The blog is used for publishing release announcements, case studies, howtos, or other project news. The repository for the source code of Bokeh itself can be found at [github.com/bokeh/bokeh](https://github.com/bokeh/bokeh).
 
-## Setup
+Full docs for setting up a GitHub Pages Jekyll blog [can be found here](https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-with-jekyll).
 
-Full docs for setting up a GH Pages Jekyll blog [can be found here](https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-with-jekyll)
+# Building Locally
 
-Short version:
+## Using Docker
 
-One time:
+After installing [`docker`](http://docker.com/), run `make serve` to build and run the website within the a container built from the [`jekyll/jekyll` image](https://hub.docker.com/r/jekyll/jekyll/) that contains all the necessary prerequisites. The site will be available at `http://localhost:4000`. Modifying source files will cause the website to rebuild in real time (refresh the browser page to see changes).
 
-1) Clone this repo
-2) Ruby >= 2.1 avaialble
-3) `gem install bundler` (if necessary)
-4) `bundle install` in top level dir of repo
+## Manually
 
-Every time:
+To build manually, you will need to have Ruby>=2.1 installed on your system. If necessary, run 
 
-1) `bundle exec jekyll serve --future`
-2) Edit site
+    gem install bundler
+    
+The first time you build locally you will need to install necessary dependcies. In the top level direcotory of this repository, run:
+
+    bundle install
+    
+Then, to serve the site, run:
+
+    bundle exec jekyll serve --future
+    
+The site will be available at `http://localhost:4000`. While this program remains running, you can edit the source files and Jekyll will automatically rebuild the site (refresh the browser page to see changes).
