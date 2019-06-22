@@ -1,6 +1,6 @@
 # Bokeh Project Blog
 
-This is the GitHub repository for the Bokeh Project Blog, [blog.bokeh.org](https://blog.bokeh.org). The blog is used for making release announcements, and publishing case studies, howtos, or other project news. The repository for the source code of the Bokeh itself can be found at github.com/bokeh/bokeh.
+This is the GitHub repository for the Bokeh Project Blog, [blog.bokeh.org](https://blog.bokeh.org). The blog is used for publishing release announcements, case studies, howtos, or other project news. The repository for the source code of the Bokeh itself can be found at [github.com/bokeh/bokeh](https://github.com/bokeh/bokeh).
 
 Full docs for setting up a GitHub Pages Jekyll blog [can be found here](https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-with-jekyll).
 
@@ -12,16 +12,16 @@ After installing [`docker`](http://docker.com/), run `make serve` to build and r
 
 ## Manually
 
-To build manually, you will need to have Ruby >= 2.1 installed on your system. If necessary, run 
+To build manually, you will need to have Ruby>=2.1 installed on your system. If necessary, run 
 
     gem install bundler
     
-The first time you build locally you will need to install mnecessary dependcies by running 
+The first time you build locally you will need to install necessary dependcies. In the top level direcotory of this repository, run:
 
     bundle install
     
-in the top level directory of this repository. Then run
+Then, to serve the site, run:
 
     bundle exec jekyll serve --future
     
-to serve the site at [http://localhost:4000](http://localhost:4000) While this remains running, you can edit the source files and Jekyll will automatically rebuild the site (refresh the browser page to see changes).
+The site will be available at [http://localhost:4000](http://localhost:4000) While this program remains running, you can edit the source files and Jekyll will automatically rebuild the site (refresh the browser page to see changes).
