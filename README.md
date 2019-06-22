@@ -8,7 +8,7 @@ Full docs for setting up a GitHub Pages Jekyll blog [can be found here](https://
 
 ## Using Docker
 
-After installing [`docker`](http://docker.com/), run `make serve` to build and run the website within the a container built from the [`jekyll/jekyll` image](https://hub.docker.com/r/jekyll/jekyll/) that contains all the necessary prerequisites. The site will be available at [http://localhost:4000](http://localhost:4000). Modifying source files will cause the website to rebuild in real time (refresh the browser page to see changes).
+After installing [`docker`](http://docker.com/), run `make serve` to build and run the website within the a container built from the [`jekyll/jekyll` image](https://hub.docker.com/r/jekyll/jekyll/) that contains all the necessary prerequisites. The site will be available at `http://localhost:4000`. Modifying source files will cause the website to rebuild in real time (refresh the browser page to see changes).
 
 ## Manually
 
@@ -24,4 +24,4 @@ Then, to serve the site, run:
 
     bundle exec jekyll serve --future
     
-The site will be available at [http://localhost:4000](http://localhost:4000) While this program remains running, you can edit the source files and Jekyll will automatically rebuild the site (refresh the browser page to see changes).
+The site will be available at `http://localhost:4000`. While this program remains running, you can edit the source files and Jekyll will automatically rebuild the site (refresh the browser page to see changes).
