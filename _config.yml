@@ -1,5 +1,7 @@
 site: Bokeh Journal
 
+ga_id: "UA-127553611-2"
+
 future: true
 
 collections:
@@ -35,3 +37,5 @@ paginate_path: "/posts/page:num/"
 
 whitelist:
   - jekyll-redirect-from
+
+
