@@ -48,11 +48,11 @@ The [examples folder](https://github.com/bokeh/bokeh/tree/master/examples/) in t
 
 To make the things easier to obtain, a zip file of just the examples is also available at
 
-`https://cdn.pydata.org/bokeh/examples/examples-<x.y.z>.zip`
+`https://cdn.bokeh.org/bokeh/examples/examples-<x.y.z>.zip`
 
 For example, the examples zipfile for the 0.12.2 release can be found at:
 
-[`https://cdn.pydata.org/bokeh/examples/examples-0.12.2.zip`](https://cdn.pydata.org/bokeh/examples/examples-0.12.2.zip)
+[`https://cdn.bokeh.org/bokeh/examples/examples-0.12.2.zip`](https://cdn.bokeh.org/bokeh/examples/examples-0.12.2.zip)
 
 -----
 
