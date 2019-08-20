@@ -21,7 +21,7 @@ steps it took to create. You can see the finished product below:
 
 In the top left corner we have statistics for three servers with line graphs
 representing CPU, memory, and disk usage.  If any graph has a reading above 75%
-it, its title, and its plot turn red like [this](https://bokeh.pydata.org/en/latest/docs/gallery/box_annotation.html).
+it, its title, and its plot turn red like [this](https://docs.bokeh.org/en/latest/docs/gallery/box_annotation.html).
 When the readings drop, things go back to normal. Moving downward, we have two
 line graphs plotting users currently connected to our system and how fast our
 system is processing their messages over time.  At the bottom is a live Google
@@ -69,16 +69,16 @@ otherwise.
 
 # Back End Setup
 
-I tried to stay with the "server app" design similar to those shown [here](https://bokeh.pydata.org/en/latest/docs/gallery.html)
-and kept my folder structure as prescribed [here](https://bokeh.pydata.org/en/latest/docs/user_guide/server.html#directory-format)
+I tried to stay with the "server app" design similar to those shown [here](https://docs.bokeh.org/en/latest/docs/gallery.html)
+and kept my folder structure as prescribed [here](https://docs.bokeh.org/en/latest/docs/user_guide/server.html#directory-format)
 to try and keep things simple, with all my Python in a common folder and a HTML
 file in a "templates" folder.  This was done so Bokeh's Tornado server would
-find the HTML file and use it as a template for the app.  I also used [threads](https://bokeh.pydata.org/en/latest/docs/user_guide/server.html#updating-from-threads)
-and [unlocked callbacks](https://bokeh.pydata.org/en/latest/docs/user_guide/server.html#updating-from-unlocked-callbacks)
+find the HTML file and use it as a template for the app.  I also used [threads](https://docs.bokeh.org/en/latest/docs/user_guide/server.html#updating-from-threads)
+and [unlocked callbacks](https://docs.bokeh.org/en/latest/docs/user_guide/server.html#updating-from-unlocked-callbacks)
 for pretty much every element in the app to keep things responsive.  The data
 for all modules is sourced from three daemonized [threads](https://docs.python.org/2/library/threading.html),
 responsible for information from SSH, HTTP, and SQL.  They are started by server
-lifecycle hooks described [here](https://bokeh.pydata.org/en/latest/docs/user_guide/server.html#lifecycle-hooks),
+lifecycle hooks described [here](https://docs.bokeh.org/en/latest/docs/user_guide/server.html#lifecycle-hooks),
 init when the server is launched, gather data from their respective source,
 and make it available to the dashboard.  And since the dashboard gets data from
 the a general cache, N users are able to share info cached from a single database,

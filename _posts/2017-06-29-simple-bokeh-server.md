@@ -12,7 +12,7 @@ redirect_from:
 This blog post shows how to start a *very simple* bokeh server application
 *programmatically*.  For more complex examples, or for the more standard
 command line interface, see the [Bokeh
-documentation](https://bokeh.pydata.org/en/latest/docs/user_guide/server.html).
+documentation](https://docs.bokeh.org/en/latest/docs/user_guide/server.html).
 
 #### Motivation
 

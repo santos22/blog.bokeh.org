@@ -13,7 +13,7 @@ bokeh: >
   <script src="https://cdn.bokeh.org/bokeh/release/bokeh-1.0.1.min.js"></script>
 ---
 
-[Chartify](https://github.com/spotify/chartify) is a new plotting library that was recently open-sourced by Spotify Labs. You can read their announcement article [here](https://labs.spotify.com/2018/11/15/introducing-chartify-easier-chart-creation-in-python-for-data-scientists/). Chartify is intended to make it easy for Python users to create standard chart types, including line, bar and area charts, and is built on top of [Bokeh](https://bokeh.pydata.org/en/latest/). As a Bokeh core contributor, I quickly experimented with Chartify to see what it's like.
+[Chartify](https://github.com/spotify/chartify) is a new plotting library that was recently open-sourced by Spotify Labs. You can read their announcement article [here](https://labs.spotify.com/2018/11/15/introducing-chartify-easier-chart-creation-in-python-for-data-scientists/). Chartify is intended to make it easy for Python users to create standard chart types, including line, bar and area charts, and is built on top of [Bokeh](https://docs.bokeh.org/en/latest/). As a Bokeh core contributor, I quickly experimented with Chartify to see what it's like.
 
 tl;dr I'm impressed. Chartify offers a clean API to ingest tidy data and generate a variety of visually pleasing charts, while also exposing the underlying Bokeh figure for further customization. I'm excited about this addition to the Python data visualization ecosystem.
 

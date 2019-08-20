@@ -130,7 +130,7 @@ attrs:
 
 When you set your Document's ``theme`` property, all of your custom styles
 are applied to the appropriate models. You can read more in the [Themes
-documentation](https://bokeh.pydata.org/en/latest/docs/reference/themes.html#bokeh-themes).
+documentation](https://docs.bokeh.org/en/latest/docs/reference/themes.html#bokeh-themes).
 
 Here, we're attaching our Theme to our Bokeh Document:
 
