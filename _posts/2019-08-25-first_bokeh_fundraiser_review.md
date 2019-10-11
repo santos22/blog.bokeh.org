@@ -59,7 +59,7 @@ Quansight extracts data from transactions, images, videos, weblogs, audio, and m
 
 ### Become a Contributor!
 
-We learned a lot about how to run a fundraiser with this first event, and we look forward to future successes. If you'd like to become a sustaining supporter of the Bokeh project, [the donation form is still accessible!](https://numfocus.salsalabs.org/donate-to-bokeh/index.html)  Other ways to contribute to the project include: 
+We learned a lot about how to run a fundraiser with this first event, and we look forward to future successes. If you'd like to become a sustaining supporter of the Bokeh project, [the donation form is still accessible!](https://numfocus.org/donate-to-bokeh)  Other ways to contribute to the project include: 
 
 * Code contributions. If you know of a way in which Bokeh's feature set could be improved, go for it! 
 * Sharing your examples of Bokeh at work. We're so proud of all the plots we see on social media and in our gallery!
