@@ -11,9 +11,9 @@ draft: false
 
 We’re always excited when Bokeh users express interest in becoming contributors, and usually the first question is: how can I help?
 
-Our [issue list on GitHub](https://github.com/bokeh/bokeh/issues) is a good place to start to see what both the project maintainers and the community consider to be important or useful opportunities for improvement. Several of these issues are tagged [**good first issue**](https://github.com/bokeh/bokeh/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22), which are some of the more accessible fixes and improvements, and a great way for a new contributor to make a difference. Good first issues generally come in two flavors: technical, but specific and contained; and less technical but broad, touching several aspects of the project to accomplish a goal.
+Our [issue list on GitHub](https://github.com/bokeh/bokeh/issues) is a good place to start... but can be daunting if you're new to the project. To make things easier for you, several of these are tagged [**good first issue**](https://github.com/bokeh/bokeh/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22), which are some of the more accessible fixes and improvements, and a great way for a new contributor to make a difference. Good first issues generally come in two flavors: technical, but specific and contained; and less technical but broad, touching several aspects of the project to accomplish a goal.
 
-We’ve chosen some of these good first issues to highlight, and encourage our users to get involved. For all of these, contributors should feel free to add to the discussion of the issue and get a clear picture of how best to solve the problem— if you have a question about an issue, chances are very good that other people have the same question! We’d like to make this a regular feature on the Bokeh blog, to encourage new contributors on an ongoing basis. Here’s our inaugural list.
+We’ve chosen some of these good first issues to highlight, and encourage our users to get involved. For all of these, contributors should feel free to add to the discussion of the issue and get a clear picture of how best to solve the problem&mdash; if you have a question about an issue, chances are very good that other people have the same question! We’d like to make this a regular feature on the Bokeh blog, to encourage new contributors on an ongoing basis. Here’s our inaugural list.
 
 ### Good First Issues
 
@@ -27,6 +27,8 @@ We’ve chosen some of these good first issues to highlight, and encourage our u
 Also, as always, we are interested to see what you make. Our examples gallery could use some fresh new instances of Bokeh at work. Our examples focus on readable code that illustrate how to use Bokeh; there are interactive applications that show how to leverage Bokeh Server, but also plenty of simple or static plots that act as clear visual references for users who are exploring their options for visualization within the library. So whatever you’re designing, big or small, we’d love to see it and consider it for inclusion in our examples set!
 
 ----
+
+
 
 As always, anyone interested in helping out should drop by the
 [Dev Chat Channel](https://gitter.im/bokeh/bokeh-dev) and say hello!
