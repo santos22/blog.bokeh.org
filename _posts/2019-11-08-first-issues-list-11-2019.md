@@ -13,7 +13,9 @@ We’re always excited when Bokeh users express interest in becoming contributor
 
 Our [issue list on GitHub](https://github.com/bokeh/bokeh/issues) is a good place to start... but can be daunting if you're new to the project. To make things easier for you, several of these are tagged [**good first issue**](https://github.com/bokeh/bokeh/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22), which are some of the more accessible fixes and improvements, and a great way for a new contributor to make a difference. Good first issues generally come in two flavors: technical, but specific and contained; and less technical but broad, touching several aspects of the project to accomplish a goal.
 
-We’ve chosen some of these good first issues to highlight, and encourage our users to get involved. For all of these, contributors should feel free to add to the discussion of the issue and get a clear picture of how best to solve the problem&mdash; if you have a question about an issue, chances are very good that other people have the same question! We’d like to make this a regular feature on the Bokeh blog, to encourage new contributors on an ongoing basis. Here’s our inaugural list.
+We’ve chosen some of these good first issues to highlight, and encourage our users to get involved. For all of these, contributors should feel free to add to the discussion of the issue and get a clear picture of how best to solve the problem. If you have a question about an issue, chances are very good that other people have the same question!
+
+We’d like to make this a regular feature on the Bokeh blog, to encourage new contributors on an ongoing basis. Here’s our inaugural list.
 
 ### Good First Issues
 
